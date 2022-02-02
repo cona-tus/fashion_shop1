@@ -1,0 +1,76 @@
+@import "/css/reset.css";
+@import "/css/variables.css";
+
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 22px;
+  --font-small: 16px;
+  --font-micro: 12px;
+
+  /* Font weight */
+  --weight-extra-bold: 800;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+  --weight-light: 300;
+  --weight-extra-light: 200;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-white);
+  font-family: "Inter", sans-serif;
+}
+
+.nav {
+  width: 100%;
+  height: 4vh;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  background-color: transparent;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: var(--color-white);
+  font-size: var(--font-small);
+  font-weight: var(--weight-extra-bold);
+  text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black),
+    -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black);
+}
+
+.navbar__center {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar__center li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.navbar__right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar__right li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.navbar__center li,
+.navbar__right li {
+  text-transform: uppercase;
+  color: var(--color-black);
+  font-size: var(--font-micro);
+  font-weight: var(--weight-regular);
+}
