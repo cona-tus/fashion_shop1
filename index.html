@@ -32,6 +32,36 @@
           <li><a href="#">bag</a></li>
         </ul>
       </nav>
+
+      <section class="slideshow__section">
+        <div class="slide fade">
+          <img src="/img/m01.png" />
+          <!-- <div class="text">text</div> -->
+        </div>
+
+        <div class="slide fade">
+          <img src="/img/m02.png" />
+          <!-- <div class="text">text</div> -->
+        </div>
+
+        <div class="slide fade">
+          <img src="img/m03.png" />
+          <!-- <div class="text">text</div> -->
+        </div>
+
+        <button class="prev" onclick="moveSlides(-1)">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="next" onclick="moveSlides(1)">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </section>
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
     </header>
     <main></main>
     <footer></footer>
