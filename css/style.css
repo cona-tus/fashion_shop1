@@ -1,14 +1,15 @@
 @import "/css/reset.css";
 @import "/css/variables.css";
 
+/* global */
 :root {
   /* Color */
   --color-white: #ffffff;
   --color-black: #000000;
 
   /* Font size */
-  --font-large: 48px;
-  --font-medium: 28px;
+  --font-large: 60px;
+  --font-medium: 36px;
   --font-regular: 22px;
   --font-small: 16px;
   --font-micro: 12px;
@@ -31,7 +32,7 @@ body {
 }
 
 /* header */
-/* navbar */
+/* navigaiton */
 .nav {
   width: 100%;
   height: 6vh;
@@ -46,7 +47,8 @@ body {
   text-transform: uppercase;
   color: var(--color-white);
   font-size: var(--font-small);
-  font-weight: var(--weight-extra-bold);
+  font-weight: var(--weight-semi-bold);
+  letter-spacing: 1.2px;
   text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black),
     -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black);
 }
@@ -77,66 +79,93 @@ body {
   font-weight: var(--weight-regular);
 }
 
-/* slider */
-.slideshow__section {
-  max-width: 100vw;
+/* slideshow */
+.slideshow {
+  width: 100vw;
+  height: 94vh;
   position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide .title {
+  font-size: 60px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.slide .subtitle {
+  font-size: 21px;
+  color: #fff;
 }
 
 .slide img {
   width: 100%;
-  height: 94vh;
+  height: 100%;
 }
 
-.slide {
-  display: none;
-}
-
-.prev,
-.next {
+/*slodeshow btns*/
+.slider__button {
   cursor: pointer;
   position: absolute;
   top: 50%;
   background: none;
   border: none;
   color: var(--color-white);
-  font-size: var(--font-regular);
-  opacity: 0.7;
+  font-size: var(--font-medium);
+  opacity: 0.4;
   transition: all 0.3s ease-in-out;
 }
 
-.prev {
-  left: 34px;
-}
-
-.next {
+#next {
   right: 34px;
 }
 
-.prev:hover {
-  transform: translateX(-10px);
-  opacity: 0.4;
+#previous {
+  left: 34px;
 }
 
-.next:hover {
+#next:hover {
   transform: translateX(10px);
-  opacity: 0.4;
+  opacity: 0.7;
 }
 
-/* .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-} */
+#previous:hover {
+  transform: translateX(-10px);
+  opacity: 0.7;
+}
 
+/*Bar(dots)*/
 .dots {
   position: absolute;
   left: 50%;
   bottom: 20px;
+  transform: translateX(-50%);
 }
 
 .dot {
@@ -144,7 +173,7 @@ body {
   display: inline-block;
   height: 4px;
   width: 20px;
-  margin: 0 2px;
+  margin: 0 1px;
   background-color: var(--color-white);
   border-radius: 10px;
   opacity: 0.3;
@@ -153,20 +182,16 @@ body {
 
 .active,
 .dot:hover {
-  width: 30px;
+  width: 34px;
   background-color: var(--color-white);
   opacity: 0.8;
 }
 
-.fade {
-  animation: fade 0.5s ease-in-out;
+/* Animation */
+.slider {
+  transition: 0.5s ease-in-out;
 }
 
-@keyframes fade {
-  from {
-    opacity: 0.7;
-  }
-  to {
-    opacity: 1;
-  }
+.dot {
+  transition: all 0.3s ease-in;
 }

@@ -1,44 +1,54 @@
+const slideshow = document.querySelector(".slideshow");
 let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const totalSlides = slides.length;
+const sliderWidth = slideshow.clientWidth;
 
-window.onload = () => {
-  showSlides(slideIndex);
+slides.forEach(function (element) {
+  element.style.width = sliderWidth + "px";
+});
 
-  setInterval(() => {
-    slideIndex++;
-    showSlides(slideIndex);
-  }, 5000);
-};
+const slider = document.querySelector(".slider");
+slider.style.width = sliderWidth * totalSlides + "px";
 
-function moveSlides(n) {
-  slideIndex = slideIndex + n;
-  showSlides(slideIndex);
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("previous");
+nextBtn.addEventListener("click", function () {
+  plusSlides(1);
+});
+prevBtn.addEventListener("click", function () {
+  plusSlides(-1);
+});
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
 }
 
-function currentSlide(n) {
-  slideIndex = n;
-  showSlides(slideIndex);
+function currentSlides(n) {
+  showSlides((slideIndex = n));
 }
 
 function showSlides(n) {
-  const slides = document.getElementsByClassName("slide");
-  const dots = document.getElementsByClassName("dot");
-  const size = slides.length;
-
-  if (n + 1 > size) {
+  slideIndex = n;
+  if (slideIndex == -1) {
+    slideIndex = totalSlides - 1;
+  } else if (slideIndex === totalSlides) {
     slideIndex = 0;
-    n = 0;
-  } else if (n < 0) {
-    slideIndex = size - 1;
-    n = size - 1;
   }
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[n].style.display = "block";
-  dots[n].className += " active";
+  slider.style.left = -(sliderWidth * slideIndex) + "px";
+  pagination();
 }
+
+function pagination() {
+  const dot = document.querySelectorAll(".dot");
+  console.log(dot);
+  dot.forEach(function (element) {
+    element.classList.remove("active");
+  });
+  dot[slideIndex].classList.add("active");
+}
+
+pagination();
+let autoSlider = setInterval(function () {
+  plusSlides(1);
+}, 5000);

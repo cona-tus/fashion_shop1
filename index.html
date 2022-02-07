@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="main.js" defer></script>
+
     <script
       src="https://kit.fontawesome.com/5c9cf55bcf.js"
       crossorigin="anonymous"
@@ -33,35 +34,55 @@
         </ul>
       </nav>
 
-      <section class="slideshow__section">
-        <div class="slide fade">
-          <img src="/img/m01.png" />
-          <!-- <div class="text">text</div> -->
-        </div>
+      <section class="slideshow">
+        <ul class="slider">
+          <li class="slide">
+            <div class="text">
+              <p class="title">New Arrivals</p>
+              <span class="subtitle"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
+              >
+              <a href="#" class="shop__button">Find out more</a>
+            </div>
+            <img src="/img/m01.png" />
+          </li>
 
-        <div class="slide fade">
-          <img src="/img/m02.png" />
-          <!-- <div class="text">text</div> -->
-        </div>
+          <li class="slide">
+            <div class="text">
+              <p class="title">New Arrivals</p>
+              <span class="subtitle"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
+              >
+              <a href="#" class="shop__button">Find out more</a>
+            </div>
+            <img src="/img/m02.png" />
+          </li>
 
-        <div class="slide fade">
-          <img src="img/m03.png" />
-          <!-- <div class="text">text</div> -->
-        </div>
+          <li class="slide">
+            <div class="text">
+              <p class="title">New Arrivals</p>
+              <span class="subtitle"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit.</span
+              >
+              <a href="#" class="shop__button">Find out more</a>
+            </div>
+            <img src="img/m03.png" />
+          </li>
+        </ul>
 
-        <button class="prev" onclick="moveSlides(-1)">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="next" onclick="moveSlides(1)">
+        <button class="slider__button" id="next">
           <i class="fas fa-chevron-right"></i>
         </button>
-      </section>
+        <button class="slider__button" id="previous">
+          <i class="fas fa-chevron-left"></i>
+        </button>
 
-      <div class="dots">
-        <span class="dot" onclick="currentSlide(0)"></span>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-      </div>
+        <ul class="dots">
+          <li class="dot" onclick="currentSlides(0)"></li>
+          <li class="dot" onclick="currentSlides(1)"></li>
+          <li class="dot" onclick="currentSlides(2)"></li>
+        </ul>
+      </section>
     </header>
     <main></main>
     <footer></footer>
