@@ -4,6 +4,12 @@ const slides = document.querySelectorAll(".slide");
 const totalSlides = slides.length;
 const sliderWidth = slideshow.clientWidth;
 
+window.onload = function () {
+  setInterval(function () {
+    plusSlides(1);
+  }, 5000);
+};
+
 slides.forEach(function (element) {
   element.style.width = sliderWidth + "px";
 });
@@ -36,19 +42,13 @@ function showSlides(n) {
     slideIndex = 0;
   }
   slider.style.left = -(sliderWidth * slideIndex) + "px";
-  pagination();
+  slideAnimation();
 }
 
-function pagination() {
-  const dot = document.querySelectorAll(".dot");
-  console.log(dot);
-  dot.forEach(function (element) {
-    element.classList.remove("active");
+function slideAnimation() {
+  const slideText = document.querySelectorAll(".slide__text");
+  slideText.forEach(function (element) {
+    element.classList.remove("fade");
   });
-  dot[slideIndex].classList.add("active");
+  slideText[slideIndex].classList.add("fade");
 }
-
-pagination();
-let autoSlider = setInterval(function () {
-  plusSlides(1);
-}, 5000);
