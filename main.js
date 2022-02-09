@@ -8,14 +8,17 @@ window.addEventListener("load", () => {
   init();
   setInterval(function () {
     plusSlides(1);
-  }, 5000);
+  }, 4000);
 });
 
 function init() {
   const firstSlide = document.querySelector(".slide");
   const firstTitle = document.querySelector(".slide__title");
+  const firstButtion = document.querySelector(".slide__button");
+
   firstSlide.classList.add(SHOWING_CLASS);
   firstTitle.style.animation = "fade-in 0.5s ease-in";
+  firstButtion.style.animation = "fade-in 0.3s ease-in 0.3s forwards";
 }
 
 function plusSlides(n) {
@@ -38,11 +41,18 @@ function showSlides(n) {
 
 function slideAnimation() {
   const slideTitle = document.querySelectorAll(".slide__title");
+  const slideButton = document.querySelectorAll(".slide__button");
 
   slideTitle.forEach(function (element) {
     element.style.animation = "";
   });
   slideTitle[slideIndex].style.animation = "fade-in 0.5s ease-in";
+
+  slideButton.forEach(function (element) {
+    element.style.animation = "";
+  });
+  slideButton[slideIndex].style.animation =
+    "fade-in 0.3s ease-in 0.3s forwards";
 }
 
 const nextBtn = document.getElementById("next");

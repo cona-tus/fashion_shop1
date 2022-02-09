@@ -47,12 +47,10 @@ body {
 
 .logo {
   text-transform: uppercase;
-  color: var(--color-white);
+  color: var(--color-black);
   font-size: var(--font-small);
   font-weight: var(--weight-semi-bold);
-  letter-spacing: 1.2px;
-  text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black),
-    -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black);
+  position: relative;
 }
 
 .navbar__center {
@@ -124,13 +122,14 @@ body {
 
 .slide .slide__button {
   position: relative;
-  padding: 10px 20px;
+  padding: 10px 0;
   margin-top: 30px;
   color: var(--color-white);
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
+  opacity: 0;
 }
 
 .slide__button-bar {
