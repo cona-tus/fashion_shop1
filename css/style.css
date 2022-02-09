@@ -129,6 +129,7 @@ body {
   color: var(--color-white);
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
+  text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
 
@@ -147,7 +148,7 @@ body {
 }
 
 .slide__button:hover .slide__button-bar {
-  width: 70px;
+  width: 80px;
   height: 2px;
   transition: all 0.3s ease-in-out;
 }
@@ -161,6 +162,17 @@ body {
 .showing {
   opacity: 1;
   z-index: 1;
+}
+
+@keyframes fade-in {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 /*slodeshow btns*/
