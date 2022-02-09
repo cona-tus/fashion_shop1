@@ -5,7 +5,7 @@
 :root {
   /* Color */
   --color-white: #ffffff;
-  --color-black: #000000;
+  --color-black: #050707;
 
   /* Font size */
   --font-large: 80px;
@@ -29,7 +29,7 @@
 
 body {
   background-color: var(--color-white);
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: Roboto, sans-serif;
   padding: 0 20px;
 }
 
@@ -99,6 +99,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 .slide .slide__text {
@@ -120,6 +122,36 @@ body {
   letter-spacing: 24px;
 }
 
+.slide .slide__button {
+  position: relative;
+  padding: 10px 20px;
+  margin-top: 30px;
+  color: var(--color-white);
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+  transition: all 0.3s ease-in-out;
+}
+
+.slide__button-bar {
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  bottom: 3px;
+  background-color: var(--color-white);
+  transition: all 0.3s ease-in-out;
+}
+
+.slide .slide__button:hover {
+  font-style: italic;
+  transition: all 0.3s ease-in-out;
+}
+
+.slide__button:hover .slide__button-bar {
+  width: 70px;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
 .slide img {
   width: 100%;
   height: 100%;
@@ -132,14 +164,14 @@ body {
 }
 
 /*slodeshow btns*/
-
-.slider__button {
+.slideshow .slider__button {
   cursor: pointer;
   position: absolute;
   top: 50%;
   background: none;
   padding: 4px;
   border: none;
+  z-index: 1;
 }
 
 .slider__button#next {
@@ -152,7 +184,7 @@ body {
 
 .slider__arrow-next,
 .slider__arrow-prev {
-  width: 70px;
+  width: 60px;
   height: 2px;
   background-color: var(--color-white);
   position: relative;
@@ -171,7 +203,7 @@ body {
 .slider__arrow-next::before,
 .slider__arrow-prev::after,
 .slider__arrow-prev::before {
-  width: 20px;
+  width: 16px;
   height: 2px;
   content: "";
   display: inline-block;
@@ -181,67 +213,67 @@ body {
 
 .slider__arrow-next::after {
   position: absolute;
-  bottom: 6.5px;
-  right: -3px;
+  bottom: 5px;
+  right: -2.4px;
   transform: rotate(45deg);
 }
 
 .slider__arrow-next::before {
   position: absolute;
-  bottom: -6.5px;
-  right: -3px;
+  bottom: -5px;
+  right: -2.4px;
   transform: rotate(-45deg);
 }
 
 .slider__arrow-prev::after {
   position: absolute;
-  bottom: 6.5px;
-  left: -3px;
+  bottom: 5px;
+  left: -2.4px;
   transform: rotate(-45deg);
 }
 
 .slider__arrow-prev::before {
   position: absolute;
-  bottom: -6.5px;
-  left: -3px;
+  bottom: -5px;
+  left: -2.4px;
   transform: rotate(45deg);
 }
 
 /* button hover */
 .slider__button:hover .slider__arrow-next,
 .slider__button:hover .slider__arrow-prev {
-  width: 50px;
+  width: 40px;
   transition: all 0.3s ease-in-out;
 }
 
 .slider__button:hover .slider__arrow-next::after {
-  width: 20px;
-  bottom: 4.5px;
-  right: -4px;
-  transform: rotate(30deg);
+  width: 12px;
+  bottom: 2px;
+  right: 0px;
+  transform: rotate(20deg);
   transition: all 0.3s ease-in-out;
 }
 
 .slider__button:hover .slider__arrow-next::before {
-  width: 20px;
-  bottom: -4.5px;
-  right: -4px;
-  transform: rotate(-30deg);
+  width: 12px;
+  bottom: -2px;
+  right: 0px;
+  transform: rotate(-20deg);
   transition: all 0.3s ease-in-out;
 }
 
 .slider__button:hover .slider__arrow-prev::after {
-  width: 20px;
-  bottom: 4.5px;
-  left: -4px;
-  transform: rotate(-30deg);
+  width: 12px;
+  bottom: 2px;
+  left: 0;
+  transform: rotate(-20deg);
   transition: all 0.3s ease-in-out;
 }
 
 .slider__button:hover .slider__arrow-prev::before {
-  width: 20px;
-  bottom: -4.5px;
-  left: -4px;
-  transform: rotate(30deg);
+  width: 12px;
+  bottom: -2px;
+  left: 0;
+  transform: rotate(20deg);
   transition: all 0.3s ease-in-out;
 }
