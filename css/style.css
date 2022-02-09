@@ -30,14 +30,15 @@
 body {
   background-color: var(--color-white);
   font-family: "Fira Sans Condensed", sans-serif;
+  padding: 0 20px;
 }
 
 /* header */
 /* navigaiton */
 .nav {
   width: 100%;
-  height: 6vh;
-  padding: 0 40px;
+  height: 8vh;
+  padding: 0 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
@@ -82,35 +83,29 @@ body {
 
 /* slideshow */
 .slideshow {
-  width: 100vw;
-  height: 94vh;
+  width: 100vw - 40px;
+  height: 89vh;
   position: relative;
-  overflow: hidden;
 }
 
 .slider {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: 1s ease-in-out;
 }
 
 .slide {
   width: 100%;
   height: 100%;
-  float: left;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .slide .slide__text {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,69 +120,128 @@ body {
   letter-spacing: 24px;
 }
 
-.fade {
-  animation: slide 1s ease-in forwards;
-}
-
-@keyframes slide {
-  from {
-    top: 60%;
-    opacity: 0;
-  }
-  to {
-    top: 50%;
-    opacity: 1;
-  }
-}
-
 .slide img {
   width: 100%;
   height: 100%;
 }
 
-.shop__button {
-  padding: 14px 30px;
-  margin-top: 40px;
-  border: 2px solid var(--color-white);
-  color: var(--color-white);
-  font-size: var(--font-small);
-  font-weight: var(--weight-regular);
-  text-transform: uppercase;
+/* animation */
+.showing {
   opacity: 1;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.shop__button:hover {
-  opacity: 0.4;
+  z-index: 1;
 }
 
 /*slodeshow btns*/
+
 .slider__button {
   cursor: pointer;
   position: absolute;
   top: 50%;
   background: none;
+  padding: 4px;
   border: none;
-  color: var(--color-white);
-  font-size: var(--font-medium);
-  opacity: 0.4;
+}
+
+.slider__button#next {
+  right: 32px;
+}
+
+.slider__button#prev {
+  left: 32px;
+}
+
+.slider__arrow-next,
+.slider__arrow-prev {
+  width: 70px;
+  height: 2px;
+  background-color: var(--color-white);
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.slider__arrow-next {
+  right: 0;
+}
+
+.slider__arrow-prev {
+  left: 0;
+}
+
+.slider__arrow-next::after,
+.slider__arrow-next::before,
+.slider__arrow-prev::after,
+.slider__arrow-prev::before {
+  width: 20px;
+  height: 2px;
+  content: "";
+  display: inline-block;
+  background-color: var(--color-white);
   transition: all 0.3s ease-in-out;
 }
 
-#next {
-  right: 34px;
+.slider__arrow-next::after {
+  position: absolute;
+  bottom: 6.5px;
+  right: -3px;
+  transform: rotate(45deg);
 }
 
-#previous {
-  left: 34px;
+.slider__arrow-next::before {
+  position: absolute;
+  bottom: -6.5px;
+  right: -3px;
+  transform: rotate(-45deg);
 }
 
-#next:hover {
-  transform: translateX(10px);
-  opacity: 0.7;
+.slider__arrow-prev::after {
+  position: absolute;
+  bottom: 6.5px;
+  left: -3px;
+  transform: rotate(-45deg);
 }
 
-#previous:hover {
-  transform: translateX(-10px);
-  opacity: 0.7;
+.slider__arrow-prev::before {
+  position: absolute;
+  bottom: -6.5px;
+  left: -3px;
+  transform: rotate(45deg);
+}
+
+/* button hover */
+.slider__button:hover .slider__arrow-next,
+.slider__button:hover .slider__arrow-prev {
+  width: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.slider__button:hover .slider__arrow-next::after {
+  width: 20px;
+  bottom: 4.5px;
+  right: -4px;
+  transform: rotate(30deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.slider__button:hover .slider__arrow-next::before {
+  width: 20px;
+  bottom: -4.5px;
+  right: -4px;
+  transform: rotate(-30deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.slider__button:hover .slider__arrow-prev::after {
+  width: 20px;
+  bottom: 4.5px;
+  left: -4px;
+  transform: rotate(-30deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.slider__button:hover .slider__arrow-prev::before {
+  width: 20px;
+  bottom: -4.5px;
+  left: -4px;
+  transform: rotate(30deg);
+  transition: all 0.3s ease-in-out;
 }
