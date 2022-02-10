@@ -1,5 +1,7 @@
 @import "/css/reset.css";
 @import "/css/variables.css";
+@import "/css/nav.css";
+@import "/css/slideshow.css";
 
 /* global */
 :root {
@@ -33,290 +35,56 @@ body {
   padding: 0 20px;
 }
 
-/* header */
-/* navigaiton */
-.nav {
-  width: 100%;
-  height: 6vh;
-  padding: 0 10px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* main */
+
+.trending__wrap {
+  width: 100vw - 40px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: transparent;
-  font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
-.logo {
-  position: relative;
+.trending__items {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  overflow: hidden;
+}
+
+.trending__item {
+  margin-bottom: 40px;
+}
+
+.trending__item img {
+  width: 250px;
+  height: 100%;
+  transition: filter 0.3s ease-in-out;
+}
+
+.trending__item img:hover {
+  filter: grayscale(0.5);
+}
+
+.trending__title {
+  text-align: center;
   color: var(--color-black);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
-  letter-spacing: -1px;
-}
-
-.navbar__center {
-  display: flex;
-  justify-content: center;
-}
-
-.navbar__center li:not(:last-child) {
-  margin-right: 30px;
-}
-
-.navbar__right {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.navbar__right li:not(:last-child) {
-  margin-right: 30px;
-}
-
-.navbar__center li,
-.navbar__right li {
-  text-transform: uppercase;
-  color: var(--color-black);
-  font-size: var(--font-micro);
-  font-weight: var(--weight-light);
-  letter-spacing: 2.4;
-}
-
-/* slideshow */
-.slideshow {
-  width: 100vw - 40px;
-  height: 89vh;
-  position: relative;
-}
-
-.slider {
-  width: 100%;
-  height: 100%;
-}
-
-.slide {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.slide .slide__text {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.slide .slide__title {
-  color: var(--color-white);
-  font-family: "Syne", sans-serif;
-  font-size: var(--font-large);
-  font-weight: var(--weight-semi-bold);
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 24px;
-}
-
-.slide__title .slide__type {
-  font-size: var(--font-medium);
-  font-weight: var(--weight-semi-bold);
-  letter-spacing: 10px;
-}
-
-.slide__quote {
-  width: 50%;
-  transform: translateX(50%);
-  margin-top: 30px;
-  color: var(--color-white);
-  font-size: var(--font-small);
-  font-weight: var(--weight-medium);
   font-family: "Roboto", sans-serif;
-  letter-spacing: 1px;
-  text-align: center;
 }
 
-.slide .slide__button {
-  cursor: pointer;
-  position: relative;
-  padding: 10px 0;
-  margin-top: 30px;
-  color: var(--color-white);
-  font-size: var(--font-small);
-  font-weight: var(--weight-medium);
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  transition: all 0.3s ease-in-out;
-  opacity: 0;
-}
-
-.slide__button .button__logo {
-  padding: 2px 6px;
-  margin-left: 100px;
-  border: 1px solid var(--color-white);
-  border-radius: 2px;
-}
-
-.slide__button-bar {
-  width: 20px;
-  height: 2px;
+.trending__button {
   position: absolute;
-  bottom: 3px;
-  background-color: var(--color-white);
-  transition: all 0.3s ease-in-out;
+  top: 55%;
 }
 
-.slide:not(:nth-child(3)) .slide__button:hover {
-  cursor: pointer;
-  font-style: italic;
-  transition: all 0.3s ease-in-out;
+#trending__prev {
+  left: 120px;
 }
 
-.slide__button:hover .slide__button-bar {
-  width: 80px;
-  height: 2px;
-  transition: all 0.3s ease-in-out;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-}
-
-/* animation */
-.showing {
-  opacity: 1;
-  z-index: 1;
-}
-
-@keyframes fade-in {
-  from {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-/*slodeshow btns*/
-.slideshow .slider__button {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  background: none;
-  padding: 4px;
-  border: none;
-  z-index: 1;
-}
-
-.slider__button#next {
-  right: 32px;
-}
-
-.slider__button#prev {
-  left: 32px;
-}
-
-.slider__arrow-next,
-.slider__arrow-prev {
-  width: 60px;
-  height: 2px;
-  background-color: var(--color-white);
-  position: relative;
-  transition: all 0.2s ease-in-out;
-}
-
-.slider__arrow-next {
-  right: 0;
-}
-
-.slider__arrow-prev {
-  left: 0;
-}
-
-.slider__arrow-next::after,
-.slider__arrow-next::before,
-.slider__arrow-prev::after,
-.slider__arrow-prev::before {
-  width: 16px;
-  height: 2px;
-  content: "";
-  display: inline-block;
-  background-color: var(--color-white);
-  transition: all 0.3s ease-in-out;
-}
-
-.slider__arrow-next::after {
-  position: absolute;
-  bottom: 5px;
-  right: -2.4px;
-  transform: rotate(45deg);
-}
-
-.slider__arrow-next::before {
-  position: absolute;
-  bottom: -5px;
-  right: -2.4px;
-  transform: rotate(-45deg);
-}
-
-.slider__arrow-prev::after {
-  position: absolute;
-  bottom: 5px;
-  left: -2.4px;
-  transform: rotate(-45deg);
-}
-
-.slider__arrow-prev::before {
-  position: absolute;
-  bottom: -5px;
-  left: -2.4px;
-  transform: rotate(45deg);
-}
-
-/* button hover */
-.slider__button:hover .slider__arrow-next,
-.slider__button:hover .slider__arrow-prev {
-  width: 40px;
-  transition: all 0.3s ease-in-out;
-}
-
-.slider__button:hover .slider__arrow-next::after {
-  width: 12px;
-  bottom: 2px;
-  right: 0px;
-  transform: rotate(20deg);
-  transition: all 0.3s ease-in-out;
-}
-
-.slider__button:hover .slider__arrow-next::before {
-  width: 12px;
-  bottom: -2px;
-  right: 0px;
-  transform: rotate(-20deg);
-  transition: all 0.3s ease-in-out;
-}
-
-.slider__button:hover .slider__arrow-prev::after {
-  width: 12px;
-  bottom: 2px;
-  left: 0;
-  transform: rotate(-20deg);
-  transition: all 0.3s ease-in-out;
-}
-
-.slider__button:hover .slider__arrow-prev::before {
-  width: 12px;
-  bottom: -2px;
-  left: 0;
-  transform: rotate(20deg);
-  transition: all 0.3s ease-in-out;
+#trending__next {
+  right: 120px;
 }

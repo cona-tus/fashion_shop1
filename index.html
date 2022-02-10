@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="main.js" defer></script>
+    <script src="/src/slideshow.js" defer></script>
 
     <script
       src="https://kit.fontawesome.com/5c9cf55bcf.js"
@@ -18,6 +19,7 @@
     />
   </head>
   <body>
+    <!-- header -->
     <header class="header">
       <nav class="nav">
         <div class="logo"><a href="#">Conatus.</a></div>
@@ -74,9 +76,8 @@
                 </p>
               </div>
               <div class="slide__button">
-                <span>STYLE_22</span><span class="button__logo">&copy;CONATUS</span>
-                
-              </div>
+                <span>STYLE_22</span
+                ><span class="button__logo">&copy;CONATUS</span>
               </div>
             </div>
             <img src="img/m03.png" />
@@ -91,6 +92,41 @@
         </button>
       </section>
     </header>
+
+    <!-- main -->
+    <main class="main">
+      <div class="trending__wrap">
+        <h2 class="trending__title">TRENDING STYLES</h2>
+        <div class="trending__items">
+          <div class="trending__item">
+            <img src="img/w01.png" />
+          </div>
+          <div class="trending__item">
+            <img src="img/w01.png" />
+          </div>
+          <div class="trending__item">
+            <img src="img/w01.png" />
+          </div>
+          <div class="trending__item">
+            <img src="img/w01.png" />
+          </div>
+          <div class="trending__item">
+            <img src="img/w02.png" />
+          </div>
+          <div class="trending__item">
+            <img src="img/w02.png" />
+          </div>
+          <div class="trending__item">
+            <img src="img/w02.png" />
+          </div>
+          <div class="trending__item">
+            <img src="img/w02.png" />
+          </div>
+        </div>
+        <button class="trending__button" id="trending__next">></button>
+        <button class="trending__button" id="trending__prev"><</button>
+      </div>
+    </main>
     <main></main>
     <footer></footer>
   </body>
