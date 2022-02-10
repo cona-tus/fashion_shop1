@@ -8,16 +8,17 @@
   --color-black: #050707;
 
   /* Font size */
-  --font-large: 80px;
+  --font-large: 72px;
   --font-medium: 36px;
   --font-regular: 24px;
   --font-small: 18px;
-  --font-micro: 14px;
+  --font-micro: 12px;
 
   /* Font weight */
   --weight-extra-bold: 900;
   --weight-bold: 700;
   --weight-semi-bold: 600;
+  --weight-medium: 500;
   --weight-regular: 400;
   --weight-light: 300;
   --weight-extra-light: 200;
@@ -29,7 +30,6 @@
 
 body {
   background-color: var(--color-white);
-  font-family: Roboto, sans-serif;
   padding: 0 20px;
 }
 
@@ -37,20 +37,21 @@ body {
 /* navigaiton */
 .nav {
   width: 100%;
-  height: 8vh;
-  padding: 0 20px;
+  height: 6vh;
+  padding: 0 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   background-color: transparent;
+  font-family: "Roboto", sans-serif;
 }
 
 .logo {
-  text-transform: uppercase;
-  color: var(--color-black);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
   position: relative;
+  color: var(--color-black);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  letter-spacing: -1px;
 }
 
 .navbar__center {
@@ -76,7 +77,8 @@ body {
   text-transform: uppercase;
   color: var(--color-black);
   font-size: var(--font-micro);
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-light);
+  letter-spacing: 2.4;
 }
 
 /* slideshow */
@@ -114,22 +116,51 @@ body {
 
 .slide .slide__title {
   color: var(--color-white);
+  font-family: "Syne", sans-serif;
   font-size: var(--font-large);
   font-weight: var(--weight-semi-bold);
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 24px;
 }
 
+.slide__title .slide__type {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  letter-spacing: 10px;
+}
+
+.slide__quote {
+  width: 50%;
+  transform: translateX(50%);
+  margin-top: 30px;
+  color: var(--color-white);
+  font-size: var(--font-small);
+  font-weight: var(--weight-medium);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
 .slide .slide__button {
+  cursor: pointer;
   position: relative;
   padding: 10px 0;
   margin-top: 30px;
   color: var(--color-white);
   font-size: var(--font-small);
-  font-weight: var(--weight-regular);
+  font-weight: var(--weight-medium);
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
   opacity: 0;
+}
+
+.slide__button .button__logo {
+  padding: 2px 6px;
+  margin-left: 100px;
+  border: 1px solid var(--color-white);
+  border-radius: 2px;
 }
 
 .slide__button-bar {
@@ -141,7 +172,8 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.slide .slide__button:hover {
+.slide:not(:nth-child(3)) .slide__button:hover {
+  cursor: pointer;
   font-style: italic;
   transition: all 0.3s ease-in-out;
 }
