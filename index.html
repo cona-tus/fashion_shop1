@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="main.js" defer></script>
     <script src="/src/slideshow.js" defer></script>
-
     <script
       src="https://kit.fontawesome.com/5c9cf55bcf.js"
       crossorigin="anonymous"
@@ -46,7 +45,7 @@
                 <div class="slide__button-bar"></div>
               </a>
             </div>
-            <img src="/img/m01.png" />
+            <div class="slide__img"></div>
           </li>
 
           <li class="slide">
@@ -61,7 +60,7 @@
                 <div class="slide__button-bar"></div>
               </a>
             </div>
-            <img src="/img/m02.png" />
+            <div class="slide__img"></div>
           </li>
 
           <li class="slide">
@@ -80,7 +79,7 @@
                 ><span class="button__logo">&copy;CONATUS</span>
               </div>
             </div>
-            <img src="img/m03.png" />
+            <div class="slide__img"></div>
           </li>
         </ul>
 
@@ -95,9 +94,25 @@
 
     <!-- main -->
     <main class="main">
-      <section class="trending__section">
+      <section class="popular__section">
+        <div class="popular__wrap">
+          <div class="popular__text">
+            <span class="scroll__text">New Direction</span>
+          </div>
+          <div class="popular__items">
+            <div class="popular__item"></div>
+            <div class="popular__item"></div>
+            <div class="popular__item"></div>
+            <div class="popular__item"></div>
+            <div class="popular__item"></div>
+            <div class="popular__item"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="trending__section">
         <div class="trending__wrap">
-          <h2 class="trending__title">TRENDING LOOKS</h2>
+          <h2 class="section__title">TRENDING LOOKS</h2>
           <div class="trending__items">
             <div class="trending__item"></div>
             <div class="trending__item"></div>
@@ -108,12 +123,14 @@
             <div class="trending__item"></div>
             <div class="trending__item"></div>
           </div>
-          <div class="trending__buttons">
-            <button class="trending__button" id="trending__prev"><</button>
-            <button class="trending__button" id="trending__next">></button>
-          </div>
+          <button class="trending__button hidden" id="trending__prev">
+            <div class="trending__arrow-prev"></div>
+          </button>
+          <button class="trending__button" id="trending__next">
+            <div class="trending__arrow-next"></div>
+          </button>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <footer></footer>
