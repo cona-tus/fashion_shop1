@@ -38,7 +38,7 @@
 
 .slide .slide__title {
   color: var(--color-white);
-  font-family: "Syne", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: var(--font-large);
   font-weight: var(--weight-semi-bold);
   text-transform: uppercase;
@@ -111,15 +111,15 @@
 }
 
 .slide:nth-child(1) .slide__img {
-  background-color: rosybrown;
+  background: url("/img/m01.png") center / cover;
 }
 
 .slide:nth-child(2) .slide__img {
-  background-color: goldenrod;
+  background: url("/img/m02.png") center / cover;
 }
 
 .slide:nth-child(3) .slide__img {
-  background-color: teal;
+  background: url("/img/m03.png") center / cover;
 }
 
 /* animation */

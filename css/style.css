@@ -203,52 +203,59 @@ body {
 
 /* popular items */
 
-.popular__section {
+.gallery__section {
   width: 100vw - 40px;
   height: 100vh;
-  background-color: yellow;
   margin-top: 40px;
 }
 
-.popular__wrap {
+.gallery__wrap {
   width: 100%;
   height: 100%;
-  background-color: green;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.popular__text {
-  display: flex;
+.gallery__text {
+  width: 100%;
   overflow: hidden;
-  margin-bottom: 40px;
+  display: flex;
 }
 
-.scroll__text {
+.gallery__title {
+  width: 100%;
+  margin-bottom: 20px;
+  color: var(--color-black);
+  font-size: var(--font-large);
+  font-weight: var(--weight-extra-bold);
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  text-transform: uppercase;
   white-space: nowrap;
-  animation: scroll 60s linear infinite;
+  letter-spacing: 2px;
+  animation: scroll 50s linear infinite;
+}
+
+.gallery__title span {
+  -webkit-text-stroke: 2px var(--color-black);
+  color: transparent;
 }
 
 @keyframes scroll {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
-  100% {
+  50% {
     transform: translateX(-100%);
   }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
-.scroll__text {
-  color: var(--color-black);
-  font-size: var(--font-large);
-  font-weight: var(--weight-extra-bold);
-  flex-wrap: nowrap;
-  overflow: hidden;
-}
-
-.popular__items {
+.gallery__items {
   width: 80%;
   height: 80%;
   display: grid;
@@ -257,31 +264,43 @@ body {
   gap: 20px;
 }
 
-.popular__item {
+.gallery__item {
   width: 100%;
   height: 100%;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.popular__item:nth-child(1) {
-  background-color: chocolate;
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease-in-out;
 }
 
-.popular__item:nth-child(2) {
-  background-color: dodgerblue;
+.gallery__item:hover img {
+  transform: scale(1.1);
 }
 
-.popular__item:nth-child(3) {
-  background-color: firebrick;
+/* .gallery__item:nth-child(1) {
+  background: url("/img/t01.png") center / cover;
 }
 
-.popular__item:nth-child(4) {
-  background-color: dodgerblue;
+.gallery__item:nth-child(2) {
+  background: url("/img/t02.png") center / cover;
 }
 
-.popular__item:nth-child(5) {
-  background-color: thistle;
+.gallery__item:nth-child(3) {
+  background: url("/img/t03.png") center / cover;
 }
 
-.popular__item:nth-child(6) {
-  background-color: wheat;
+.gallery__item:nth-child(4) {
+  background: url("/img/t04.png") center / cover;
 }
+
+.gallery__item:nth-child(5) {
+  background: url("/img/t01.png") center / cover;
+}
+
+.gallery__item:nth-child(6) {
+  background: url("/img/t01.png") center / cover;
+} */
