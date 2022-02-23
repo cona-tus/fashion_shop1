@@ -14,7 +14,7 @@
   --font-large: 72px;
   --font-medium: 36px;
   --font-regular: 24px;
-  --font-small: 18px;
+  --font-small: 16px;
   --font-micro: 12px;
 
   /* Font weight */
@@ -42,11 +42,12 @@ body {
 .instagram__section {
   width: 100vw - 40px;
   margin-top: 40px;
+  margin-top: 88px;
 }
 
 .insta__items {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .insta__item img {
