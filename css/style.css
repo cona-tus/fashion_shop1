@@ -40,8 +40,6 @@ body {
 /* instagram section */
 
 .instagram__section {
-  width: 100vw - 40px;
-  margin-top: 40px;
   margin-top: 88px;
 }
 
@@ -57,16 +55,72 @@ body {
 
 /* info section */
 .info__section {
-  width: 100vw - 40px;
   height: 40vh;
-  margin-top: 40px;
-  background-color: brown;
+  margin-top: 88px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: 60px;
+  font-family: "Roboto", sans-serif;
 }
 
 .info__items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: var(--color-black);
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+}
+
+.info__title {
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  margin-bottom: 30px;
+}
+
+.info__item {
+  font-size: var(--font-micro);
+  font-weight: var(--weight-regular);
+  margin-top: 10px;
+}
+
+.info__item i {
+  font-size: var(--font-small);
+  margin-right: 4px;
+}
+
+.info__item:hover {
+  font-style: italic;
+}
+
+.newsletter__form {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.newsletter__input {
+  width: 70%;
+  border: none;
+  border-bottom: 2px solid var(--color-black);
+  background-color: transparent;
+  margin-top: 30px;
+}
+
+.newsletter__input:focus {
+  border: none;
+  border-bottom: 2px solid var(--color-black);
+  outline: none;
+}
+
+.newsletter__input::placeholder {
+  color: var(--color-black);
+  font-size: var(--font-micro);
+  font-weight: var(--weight-light);
+}
+
+.newsletter__button {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 78px;
+  border: none;
+  background-color: transparent;
+  font-size: var(--font-small);
 }
