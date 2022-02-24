@@ -1,4 +1,4 @@
-const slideshow = document.querySelector(".slideshow");
+const slideshow = document.querySelector(".slideshow__section");
 const slides = document.querySelectorAll(".slide");
 const totalSlides = slides.length;
 const slideText = document.querySelectorAll(".slide__text");
@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
 function init() {
   const firstSlide = document.querySelector(".slide");
   const firstTitle = document.querySelector(".slide__title");
-  const firstButtion = document.querySelector(".slide__button");
+  const firstButtion = document.querySelector(".more__button");
 
   firstSlide.classList.add(SHOWING_CLASS);
   firstTitle.style.animation = "fade-in 0.5s ease-in";
@@ -48,7 +48,7 @@ function showSlides(n) {
 
 function slideAnimation() {
   const slideTitle = document.querySelectorAll(".slide__title");
-  const slideButton = document.querySelectorAll(".slide__button");
+  const slideButton = document.querySelectorAll(".more__button");
 
   slideTitle.forEach(function (element) {
     element.style.animation = "";
@@ -62,8 +62,8 @@ function slideAnimation() {
     "fade-in 0.3s ease-in 0.3s forwards";
 }
 
-const nextBtn = document.getElementById("next");
-const prevBtn = document.getElementById("prev");
+const nextBtn = document.querySelector("#slider__next");
+const prevBtn = document.querySelector("#slider__prev");
 nextBtn.addEventListener("click", function () {
   plusSlides(1);
 });

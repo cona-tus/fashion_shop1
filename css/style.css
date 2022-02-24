@@ -3,6 +3,7 @@
 @import "/css/nav.css";
 @import "/css/slideshow.css";
 @import "/css/main.css";
+@import "/css/footer.css";
 
 /* global */
 :root {
@@ -36,91 +37,61 @@ body {
   padding: 0 20px;
 }
 
-/* footer */
-/* instagram section */
-
-.instagram__section {
-  margin-top: 88px;
-}
-
-.insta__items {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.insta__item img {
-  width: 100%;
-  height: 100%;
-}
-
-/* info section */
-.info__section {
-  height: 40vh;
-  margin-top: 88px;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  padding: 60px;
-  font-family: "Roboto", sans-serif;
-}
-
-.info__items {
+/* logo */
+.logo {
   color: var(--color-black);
-  font-size: var(--font-small);
-  font-weight: var(--weight-regular);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: -1px;
 }
 
-.info__title {
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  margin-bottom: 30px;
+.copy__logo {
+  padding: 2px 6px;
+  margin-left: 100px;
+  border: 1px solid var(--color-white);
+  border-radius: 2px;
 }
 
-.info__item {
-  font-size: var(--font-micro);
-  font-weight: var(--weight-regular);
-  margin-top: 10px;
-}
-
-.info__item i {
-  font-size: var(--font-small);
-  margin-right: 4px;
-}
-
-.info__item:hover {
-  font-style: italic;
-}
-
-.newsletter__form {
+/* more button */
+.more__button {
   position: relative;
-  margin-bottom: 10px;
-}
-
-.newsletter__input {
-  width: 70%;
-  border: none;
-  border-bottom: 2px solid var(--color-black);
-  background-color: transparent;
+  padding: 10px 0;
   margin-top: 30px;
-}
-
-.newsletter__input:focus {
-  border: none;
-  border-bottom: 2px solid var(--color-black);
-  outline: none;
-}
-
-.newsletter__input::placeholder {
-  color: var(--color-black);
-  font-size: var(--font-micro);
-  font-weight: var(--weight-light);
-}
-
-.newsletter__button {
-  cursor: pointer;
-  position: absolute;
-  bottom: 0;
-  right: 78px;
-  border: none;
-  background-color: transparent;
+  color: var(--color-white);
   font-size: var(--font-small);
+  font-weight: var(--weight-medium);
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.more__button-bar {
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  bottom: 3px;
+  background-color: var(--color-white);
+  transition: all 0.3s ease-in-out;
+}
+
+.story__item .more__button {
+  color: var(--color-black);
+  opacity: 1;
+}
+
+.story__item .more__button-bar {
+  background-color: var(--color-black);
+}
+
+.more__button:hover {
+  font-style: italic;
+  transition: all 0.3s ease-in-out;
+}
+
+.more__button:hover .more__button-bar {
+  width: 74px;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
 }

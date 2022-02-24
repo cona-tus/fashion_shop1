@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     ></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Syne:wght@400;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -21,13 +21,13 @@
     <!-- header -->
     <header class="header">
       <nav class="nav">
-        <div class="logo"><a href="#">Conatus.</a></div>
+        <a href="#" class="logo">Conatus.</a>
         <ul class="navbar__center">
           <li><a href="#">HOME</a></li>
           <li><a href="#">PAGES</a></li>
           <li><a href="#">SHOP</a></li>
         </ul>
-        <ul class="navbar__right">
+        <ul class="navbar__side">
           <li><a href="#">search</a></li>
           <li><a href="#">user</a></li>
           <li><a href="#">wish</a></li>
@@ -35,14 +35,14 @@
         </ul>
       </nav>
 
-      <section class="slideshow">
+      <section class="slideshow__section">
         <ul class="slider">
           <li class="slide">
             <div class="slide__text">
               <h1 class="slide__title">New Arrivals</h1>
-              <a href="#" class="slide__button"
-                >see more
-                <div class="slide__button-bar"></div>
+              <a href="#" class="more__button"
+                >SEE MORE
+                <div class="more__button-bar"></div>
               </a>
             </div>
             <div class="slide__img"></div>
@@ -51,13 +51,13 @@
           <li class="slide">
             <div class="slide__text">
               <p class="slide__title">
-                <span class="slide__type">vintage</span>
-                <span class="slide__type">Casual</span>
-                <span class="slide__type">street</span>
+                <span class="slide__subtitle">VINTAGE</span>
+                <span class="slide__subtitle">CASUAL</span>
+                <span class="slide__subtitle">STREET</span>
               </p>
-              <a href="#" class="slide__button"
-                >see more
-                <div class="slide__button-bar"></div>
+              <a href="#" class="more__button"
+                >SEE MORE
+                <div class="more__button-bar"></div>
               </a>
             </div>
             <div class="slide__img"></div>
@@ -66,7 +66,7 @@
           <li class="slide">
             <div class="slide__text">
               <div class="slide__title">
-                <h1>GRUNGE.</h1>
+                <h1>SPORTY.</h1>
                 <p class="slide__quote">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
                   aut iure architecto libero consequuntur similique expedita
@@ -74,19 +74,19 @@
                   delectus velit sit officia saepe aliquam!
                 </p>
               </div>
-              <div class="slide__button">
-                <span>STYLE_22</span
-                ><span class="button__logo">&copy;CONATUS</span>
+              <div class="more__button">
+                <span>STYLES2</span
+                ><span class="copy__logo">&copy;CONATUS</span>
               </div>
             </div>
             <div class="slide__img"></div>
           </li>
         </ul>
 
-        <button class="slider__button" id="next">
+        <button class="slider__button" id="slider__next">
           <div class="slider__arrow-next"></div>
         </button>
-        <button class="slider__button" id="prev">
+        <button class="slider__button" id="slider__prev">
           <div class="slider__arrow-prev"></div>
         </button>
       </section>
@@ -100,19 +100,19 @@
             <img src="img/t01.png" />
           </li>
           <li class="gallery__item">
-            <img src="img/t01.png" />
+            <img src="img/t02.png" />
           </li>
           <li class="gallery__item">
-            <img src="img/t01.png" />
+            <img src="img/t03.png" />
           </li>
           <li class="gallery__item">
-            <img src="img/t01.png" />
+            <img src="img/t04.png" />
           </li>
           <li class="gallery__item">
-            <img src="img/t01.png" />
+            <img src="img/t05.png" />
           </li>
           <li class="gallery__item">
-            <img src="img/t01.png" />
+            <img src="img/t06.png" />
           </li>
         </ul>
       </section>
@@ -174,9 +174,9 @@
               beatae consectetur aut natus ab debitis voluptate, quia dolor
               architecto consequuntur doloribus cum?
             </p>
-            <a href="#" class="read__button"
-              >READ MORE
-              <div class="read__button-bar"></div>
+            <a href="#" class="more__button"
+              >SEE MORE
+              <div class="more__button-bar"></div>
             </a>
           </li>
           <li class="story__item"></li>
@@ -196,9 +196,9 @@
               natus ab debitis voluptate, quia dolor architecto consequuntur
               doloribus cum?
             </p>
-            <a href="#" class="read__button"
-              >READ MORE
-              <div class="read__button-bar"></div>
+            <a href="#" class="more__button"
+              >SEE MORE
+              <div class="more__button-bar"></div>
             </a>
           </li>
         </ul>
@@ -209,16 +209,16 @@
       <section class="instagram__section">
         <ul class="insta__items">
           <li class="insta__item">
-            <img src="img/w03.png" />
+            <img src="img/instagram01.png" />
           </li>
           <li class="insta__item">
-            <img src="img/w03.png" />
+            <img src="img/instagram02.png" />
           </li>
           <li class="insta__item">
-            <img src="img/w03.png" />
+            <img src="img/instagram03.png" />
           </li>
           <li class="insta__item">
-            <img src="img/w03.png" />
+            <img src="img/instagram04.png" />
           </li>
         </ul>
       </section>

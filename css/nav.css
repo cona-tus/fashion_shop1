@@ -6,16 +6,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  background-color: transparent;
-  font-family: "Roboto", sans-serif;
-}
-
-.logo {
-  position: relative;
-  color: var(--color-black);
-  font-size: var(--font-regular);
-  font-weight: var(--weight-bold);
-  letter-spacing: -1px;
+  font-family: "Titillium Web", sans-serif;
 }
 
 .navbar__center {
@@ -27,20 +18,20 @@
   margin-right: 30px;
 }
 
-.navbar__right {
+.navbar__side {
   display: flex;
   justify-content: flex-end;
 }
 
-.navbar__right li:not(:last-child) {
+.navbar__side li:not(:last-child) {
   margin-right: 30px;
 }
 
 .navbar__center li,
-.navbar__right li {
-  text-transform: uppercase;
+.navbar__side li {
   color: var(--color-black);
   font-size: var(--font-micro);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-medium);
   letter-spacing: 2.4;
+  text-transform: uppercase;
 }

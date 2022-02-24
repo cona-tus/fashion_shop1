@@ -176,7 +176,7 @@
   height: 2px;
   content: "";
   display: inline-block;
-  background-color: var(--color-white);
+  background-color: var(--color-black);
 }
 
 .trending__arrow-next::after {
@@ -228,7 +228,6 @@
   justify-content: space-around;
   align-items: flex-start;
   padding: 100px;
-  font-family: "Roboto", sans-serif;
 }
 
 .story__item:nth-child(2) {
@@ -236,13 +235,14 @@
 }
 
 .story__item:nth-child(3) {
-  background: url("/img/t02.png") center / cover;
+  background: url("/img/h01.png") center / cover;
 }
 
 .story__title {
   color: var(--color-black);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
+  font-family: "Roboto", sans-serif;
   letter-spacing: 0.5px;
 }
 
@@ -253,35 +253,5 @@
 .story__text {
   font-size: var(--font-small);
   font-weight: var(--weight-light);
-}
-
-.read__button {
-  cursor: pointer;
-  position: relative;
-  padding: 10px 0;
-  color: var(--color-black);
-  font-size: var(--font-small);
-  font-weight: var(--weight-medium);
-  text-transform: uppercase;
-  transition: all 0.3s ease-in-out;
-}
-
-.read__button-bar {
-  width: 20px;
-  height: 2px;
-  position: absolute;
-  bottom: 3px;
-  background-color: var(--color-black);
-  transition: all 0.3s ease-in-out;
-}
-
-.read__button:hover {
-  font-style: italic;
-  transition: all 0.3s ease-in-out;
-}
-
-.read__button:hover .read__button-bar {
-  width: 88px;
-  height: 2px;
-  transition: all 0.3s ease-in-out;
+  font-family: "Titillium Web", sans-serif;
 }
