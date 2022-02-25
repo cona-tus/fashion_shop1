@@ -20,18 +20,44 @@
   <body>
     <!-- header -->
     <header class="header">
-      <nav class="nav">
-        <a href="#" class="logo">Conatus.</a>
-        <ul class="navbar__center">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">PAGES</a></li>
-          <li><a href="#">SHOP</a></li>
-        </ul>
-        <ul class="navbar__side">
-          <li><a href="#">search</a></li>
-          <li><a href="#">user</a></li>
-          <li><a href="#">wish</a></li>
-          <li><a href="#">bag(0)</a></li>
+      <nav class="navigation">
+        <ul class="navbar">
+          <li id="logo" class="nav__menu">
+            Conatus.
+            <span>Conatus.</span>
+          </li>
+
+          <li class="nav__menu">
+            <ul class="navbar__column">
+              <li><a href="#">HOME</a></li>
+              <li>
+                <a href="#">PAGES</a>
+                <ul class="dropdown__menu">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQ Page</a></li>
+                </ul>
+              </li>
+              <li><a href="#">SHOP</a></li>
+            </ul>
+          </li>
+
+          <li class="nav__menu">
+            <ul class="navbar__column">
+              <li>
+                <a href="#"><i class="fa fa-user"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-search fa"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-heart"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
 
@@ -98,6 +124,10 @@
         <ul class="gallery__items">
           <li class="gallery__item">
             <img src="img/t01.png" />
+            <div class="gallery__info">
+              <span>hello</span>
+              <span>100$</span>
+            </div>
           </li>
           <li class="gallery__item">
             <img src="img/t02.png" />
@@ -115,21 +145,6 @@
             <img src="img/t06.png" />
           </li>
         </ul>
-      </section>
-
-      <section class="scroll__section">
-        <p class="scroll__title">
-          <span class="scroll__text">New - Direction</span>
-          <span class="scroll__text">New - Styles</span>
-          <span class="scroll__text">New - Direction</span>
-          <span class="scroll__text">New - Styles</span>
-        </p>
-        <p class="scroll__title">
-          <span class="scroll__text">New - Direction</span>
-          <span class="scroll__text">New - Styles</span>
-          <span class="scroll__text">New - Direction</span>
-          <span class="scroll__text">New - Styles</span>
-        </p>
       </section>
 
       <section class="trending__section">
@@ -150,6 +165,21 @@
             <div class="trending__arrow-next"></div>
           </button>
         </div>
+      </section>
+
+      <section class="scroll__section">
+        <p class="scroll__title">
+          <span class="scroll__text">New - Direction</span>
+          <span class="scroll__text">New - Styles</span>
+          <span class="scroll__text">New - Direction</span>
+          <span class="scroll__text">New - Styles</span>
+        </p>
+        <p class="scroll__title">
+          <span class="scroll__text">New - Direction</span>
+          <span class="scroll__text">New - Styles</span>
+          <span class="scroll__text">New - Direction</span>
+          <span class="scroll__text">New - Styles</span>
+        </p>
       </section>
 
       <section class="story__section">

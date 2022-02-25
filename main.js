@@ -32,3 +32,18 @@ trendingBtnPrev.addEventListener("click", () => {
     trendingBtnNext.classList.remove("hidden");
   }
 });
+
+// navbar
+const shopNavbar = document.querySelector(".shop__navbar");
+const shopButton = document.querySelector(".shop__button");
+const shopMenu = document.querySelector(".shop__menu");
+
+shopButton.addEventListener("mouseover", () => {
+  console.log("hi");
+  shopMenu.classList.add("active");
+});
+
+shopButton.addEventListener("mouseleave", () => {
+  console.log("bye");
+  shopMenu.classList.remove("active");
+});

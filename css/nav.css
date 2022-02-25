@@ -1,37 +1,108 @@
 /* navigaiton */
-.nav {
+.navbar {
   width: 100%;
-  height: 6vh;
-  padding: 0 10px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  font-family: "Titillium Web", sans-serif;
 }
 
-.navbar__center {
+.nav__menu {
+  width: 33%;
+}
+
+.navbar__column {
+  font-size: var(--font-small);
+  font-family: "Titillium Web", sans-serif;
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav__menu:nth-child(2) .navbar__column {
   display: flex;
   justify-content: center;
 }
 
-.navbar__center li:not(:last-child) {
-  margin-right: 30px;
+.nav__menu:nth-child(2) > .navbar__column > li {
+  padding: 30px 0;
 }
 
-.navbar__side {
+.nav__menu:nth-child(2) .navbar__column li:not(:last-child) {
+  margin-right: 40px;
+}
+
+.nav__menu:nth-child(3) .navbar__column {
   display: flex;
   justify-content: flex-end;
 }
 
-.navbar__side li:not(:last-child) {
+.nav__menu:nth-child(3) .navbar__column li:not(:last-child) {
   margin-right: 30px;
 }
 
-.navbar__center li,
-.navbar__side li {
-  color: var(--color-black);
+.nav__menu > .navbar__column > li {
+  position: relative;
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: 74px;
+  border-top: 2px solid var(--color-black);
+  left: 0;
+  z-index: 2;
+}
+
+.dropdown__menu li {
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding: 20px 30px;
+  background-color: var(--color-white);
   font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  letter-spacing: 2.4;
-  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+
+.dropdown__menu li:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.navbar__column li:hover > .dropdown__menu li {
+  display: block;
+  transform-origin: top center;
+  opacity: 0;
+}
+
+.navbar__column li:hover > .dropdown__menu {
+  perspective: 1000px;
+}
+
+.navbar__column li:hover > .dropdown__menu li:nth-child(1) {
+  animation: navbar 0.3s ease-in-out forwards;
+  animation-delay: -0.15s;
+}
+
+.navbar__column li:hover > .dropdown__menu li:nth-child(2) {
+  animation: navbar 0.3s ease-in-out forwards;
+  animation-delay: 0s;
+}
+
+.navbar__column li:hover > .dropdown__menu li:nth-child(3) {
+  animation: navbar 0.3s ease-in-out forwards;
+  animation-delay: 0.15s;
+}
+
+@keyframes navbar {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  50% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
 }

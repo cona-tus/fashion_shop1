@@ -14,7 +14,7 @@
   /* Font size */
   --font-large: 72px;
   --font-medium: 36px;
-  --font-regular: 24px;
+  --font-regular: 20px;
   --font-small: 16px;
   --font-micro: 12px;
 
@@ -38,12 +38,21 @@ body {
 }
 
 /* logo */
-.logo {
+#logo {
+  position: relative;
   color: var(--color-black);
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-bold);
   font-family: "Titillium Web", sans-serif;
   letter-spacing: -1px;
+}
+
+#logo span {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  color: var(--color-white);
+  -webkit-text-stroke: 1px var(--color-black);
 }
 
 .copy__logo {
