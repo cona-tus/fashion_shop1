@@ -1,12 +1,12 @@
 /* footer */
 /* instagram section */
 .instagram__section {
-  margin-top: 88px;
+  margin-top: 200px;
 }
 
 .insta__items {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .insta__item img {
@@ -17,7 +17,7 @@
 /* info section */
 .info__section {
   height: 40vh;
-  margin-top: 88px;
+  margin-top: 100px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   padding: 60px;

@@ -68,7 +68,7 @@
 }
 
 .dropdown__menu li:hover {
-  font-style: italic;
+  color: var(--color-gray);
 }
 
 .nav__title:hover > .dropdown__menu,
@@ -99,7 +99,7 @@
 }
 
 .dropdown__column > ul > li:not(.dropdown__title):hover {
-  font-style: italic;
+  color: var(--color-gray);
 }
 
 .dropdown__title {

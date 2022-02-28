@@ -10,9 +10,10 @@
   /* Color */
   --color-white: #ffffff;
   --color-black: #050707;
+  --color-gray: #808080;
 
   /* Font size */
-  --font-large: 72px;
+  --font-large: 62px;
   --font-medium: 36px;
   --font-regular: 20px;
   --font-small: 16px;
@@ -95,7 +96,6 @@ body {
 }
 
 .more__button:hover {
-  font-style: italic;
   transition: all 0.3s ease-in-out;
 }
 
