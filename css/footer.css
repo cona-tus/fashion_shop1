@@ -50,15 +50,17 @@
 
 /* info section */
 .info__section {
+  background-color: var(--color-black);
   width: 100%;
-  height: 40vh;
-  margin-top: 100px;
+  height: 50vh;
+  margin-top: 200px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  padding: 60px;
+  padding: 100px;
 }
 
 .info__title {
+  color: var(--color-white);
   font-family: "Roboto", sans-serif;
   font-size: var(--font-small);
   font-weight: var(--weight-bold);
@@ -68,7 +70,7 @@
 }
 
 .info__item {
-  color: var(--color-black);
+  color: var(--color-white);
   font-family: "Roboto", sans-serif;
   font-size: var(--font-small);
   font-weight: var(--weight-light);
@@ -114,14 +116,14 @@
 }
 
 .newsletter__input::placeholder {
-  color: var(--color-black);
+  color: var(--color-white);
   font-family: "Roboto", sans-serif;
   font-size: var(--font-small);
   font-weight: var(--weight-light);
 }
 
 .newsletter__input:focus::placeholder {
-  color: var(--color-light-gray);
+  color: var(--color-white);
 }
 
 .newsletter__button {
@@ -140,5 +142,5 @@
 }
 
 .newsletter__button i:hover {
-  color: var(--color-light-gray);
+  color: var(--color-white);
 }
