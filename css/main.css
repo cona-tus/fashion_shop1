@@ -225,21 +225,6 @@
   filter: grayscale(0.5);
 }
 
-.shop__sale {
-  padding: 5px 15px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: var(--color-black);
-}
-
-.shop__sale span {
-  font-family: "Roboto", sans-serif;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  color: var(--color-white);
-}
-
 .shop__price {
   position: relative;
 }

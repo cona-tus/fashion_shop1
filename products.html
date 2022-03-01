@@ -7,7 +7,6 @@
     <title>Conatus | Products</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="main.js" defer></script>
-    <script src="/src/slideshow.js" defer></script>
     <script
       src="https://kit.fontawesome.com/5c9cf55bcf.js"
       crossorigin="anonymous"
@@ -101,7 +100,7 @@
     <main class="main">
       <section class="products__section">
         <ul class="categories">
-          <span>New Styles, New Ideas.</span>
+          <span class="category__subtitle">New Styles, New Ideas.</span>
           <form class="category__form">
             <input
               type="text"
@@ -109,126 +108,158 @@
               placeholder="Search"
               required
             />
-            <button type="submit" class="category__button">
+            <button type="submit" class="category__submit">
               <i class="fas fa-search"></i>
             </button>
           </form>
           <ul class="category__items">
             <li class="category__item">
               <h1 class="category__title">CATEGORY</h1>
+              <div class="category__filter">
+                <button class="category__button selected" data-filter="*">
+                  All<span class="category__count">(12)</span>
+                </button>
+                <button class="category__button" data-filter="tshirts">
+                  T-shirts<span class="category__count">(06)</span>
+                </button>
+                <button class="category__button" data-filter="hoodie">
+                  Hoodie<span class="category__count">(03)</span>
+                </button>
+                <button class="category__button" data-filter="sneakers">
+                  Sneakers<span class="category__count">(03)</span>
+                </button>
+              </div>
             </li>
-            <li class="category__item"><a href="#">T-shirts (06)</a></li>
-            <li class="category__item"><a href="#">Hoodie (03)</a></li>
-            <li class="category__item"><a href="#">Shooes (03)</a></li>
           </ul>
         </ul>
         <ul class="products">
           <li class="product">
-            <div class="product__img">
+            <a href="#" class="product__img" target="blank" data-type="tshirts">
               <img src="img/t01.png" />
-            </div>
-            <div class="shop__info">
-              <span class="shop__title">Jacinta</span>
-              <span class="shop__price">24$</span>
-            </div>
+              <div class="shop__infomation">
+                <span class="shop__titles">Alexandra</span>
+                <span class="shop__prices">30$</span>
+              </div>
+            </a>
           </li>
           <li class="product">
-            <div class="product__img">
+            <a
+              href="#"
+              class="product__img"
+              target="blank"
+              data-type="sneakers"
+            >
               <img src="img/shoe02.png" />
-            </div>
+            </a>
             <div class="shop__info">
-              <span class="shop__title">Jacinta</span>
+              <span class="shop__title">Hermione</span>
               <span class="shop__price">24$</span>
             </div>
           </li>
           <li class="product">
-            <div class="product__img">
+            <a href="#" class="product__img" target="blank" data-type="hoodie">
               <img src="img/hood01.png" />
-            </div>
+              <div class="shop__sale">
+                <span>SALE</span>
+              </div>
+            </a>
             <div class="shop__info">
-              <span class="shop__title">Jacinta</span>
-              <span class="shop__price">24$</span>
+              <span class="shop__title">Phoenix</span>
+              <span class="shop__price">36$</span>
             </div>
           </li>
           <li class="product">
-            <div class="product__img">
+            <a href="#" class="product__img" target="blank" data-type="tshirts">
               <img src="img/t06.png" />
-            </div>
+            </a>
             <div class="shop__info">
               <span class="shop__title">Jacinta</span>
               <span class="shop__price">24$</span>
             </div>
           </li>
           <li class="product">
-            <div class="product__img">
+            <a href="#" class="product__img" target="blank" data-type="tshirts">
               <img src="img/t02.png" />
-            </div>
+            </a>
             <div class="shop__info">
-              <span class="shop__title">Jacinta</span>
-              <span class="shop__price">24$</span>
+              <span class="shop__title">Cynthia</span>
+              <span class="shop__price">34$</span>
             </div>
           </li>
           <li class="product">
-            <div class="product__img">
+            <a
+              href="#"
+              class="product__img"
+              target="blank"
+              data-type="sneakers"
+            >
               <img src="img/shoe03.png" />
-            </div>
+            </a>
             <div class="shop__info">
-              <span class="shop__title">Jacinta</span>
-              <span class="shop__price">24$</span>
+              <span class="shop__title">Iris</span>
+              <span class="shop__price">32$</span>
             </div>
           </li>
           <li class="product">
-            <div class="product__img">
+            <a href="#" class="product__img" target="blank" data-type="tshirts">
               <img src="img/t03.png" />
-            </div>
+            </a>
             <div class="shop__info">
-              <span class="shop__title">Jacinta</span>
-              <span class="shop__price">24$</span>
+              <span class="shop__title">Danae</span>
+              <span class="shop__price">28$</span>
             </div>
           </li>
           <li class="product">
-            <div class="product__img">
+            <a
+              href="#"
+              class="product__img"
+              target="blank"
+              data-type="sneakers"
+            >
               <img src="img/shoe01.png" />
-            </div>
+              <div class="shop__sale">
+                <span>NEW</span>
+              </div>
+            </a>
             <div class="shop__info">
-              <span class="shop__title">Jacinta</span>
-              <span class="shop__price">24$</span>
+              <span class="shop__title">Ella</span>
+              <span class="shop__price">20$</span>
             </div>
           </li>
           <li class="product">
-            <div class="product__img">
+            <a href="#" class="product__img" target="blank" data-type="hoodie">
               <img src="img/hood02.png" />
-            </div>
+            </a>
             <div class="shop__info">
-              <span class="shop__title">Jacinta</span>
-              <span class="shop__price">24$</span>
+              <span class="shop__title">Katherine</span>
+              <span class="shop__price">38$</span>
             </div>
           </li>
           <li class="product">
-            <div class="product__img">
+            <a href="#" class="product__img" target="blank" data-type="hoodie">
               <img src="img/hood03.png" />
-            </div>
+            </a>
             <div class="shop__info">
-              <span class="shop__title">Jacinta</span>
-              <span class="shop__price">24$</span>
+              <span class="shop__title">Khloe</span>
+              <span class="shop__price">28$</span>
             </div>
           </li>
           <li class="product">
-            <div class="product__img">
+            <a href="#" class="product__img" target="blank" data-type="tshirts">
               <img src="img/t04.png" />
-            </div>
+            </a>
             <div class="shop__info">
-              <span class="shop__title">Jacinta</span>
-              <span class="shop__price">24$</span>
+              <span class="shop__title">Eleanor</span>
+              <span class="shop__price">36$</span>
             </div>
           </li>
           <li class="product">
-            <div class="product__img">
+            <a href="#" class="product__img" target="blank" data-type="tshirts">
               <img src="img/t05.png" />
-            </div>
+            </a>
             <div class="shop__info">
-              <span class="shop__title">Jacinta</span>
-              <span class="shop__price">24$</span>
+              <span class="shop__title">Helena</span>
+              <span class="shop__price">30$</span>
             </div>
           </li>
         </ul>
