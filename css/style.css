@@ -11,6 +11,7 @@
   --color-white: #ffffff;
   --color-black: #050707;
   --color-gray: #808080;
+  --color-light-gray: #d8dade;
 
   /* Font size */
   --font-large: 62px;
@@ -103,4 +104,51 @@ body {
   width: 74px;
   height: 2px;
   transition: all 0.3s ease-in-out;
+}
+
+/* shop info */
+.shop__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shop__icon i {
+  padding: 12px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  animation: appear-out 0.5s ease-in-out forwards;
+}
+
+.shop__icon i:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.shop__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  margin-top: 20px;
+}
+
+.shop__info .shop__title {
+  color: var(--color-black);
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.shop__info .shop__price {
+  color: var(--color-black);
+  font-size: var(--font-micro);
+  font-weight: var(--weight-regular);
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
 }

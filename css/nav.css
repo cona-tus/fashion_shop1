@@ -14,7 +14,7 @@
 
 .navbar__column {
   font-size: var(--font-small);
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: 1px;
