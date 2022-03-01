@@ -62,9 +62,11 @@
   }
 }
 
+/* shop section */
 .shop__section {
   height: 20vh;
 }
+
 .shop__button {
   margin: auto;
   text-align: center;
@@ -79,6 +81,11 @@
   letter-spacing: 2px;
   background-color: var(--color-light-gray);
   padding: 20px 24px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.shop__button a:hover {
+  opacity: 0.5;
 }
 
 /* scroll text */
@@ -120,14 +127,10 @@
 
 /* lookbook section */
 .lookbook__section {
-  width: 100vw -40px;
-  height: 100%;
   margin-top: 80px;
 }
 
 .lookbook__items {
-  width: 100%;
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 100vh;
@@ -154,6 +157,14 @@
 
 .lookbook__item:nth-child(1) .lookbook__img {
   background: url("/img/lookbook04.png") center / cover;
+}
+
+.lookbook__item:nth-child(2) .lookbook__img {
+  background: url("/img/shoe01.png") center / cover;
+}
+
+.lookbook__item:nth-child(3) .lookbook__img {
+  background: url("/img/hoodie01.png") center / cover;
 }
 
 .lookbook__item:nth-child(4) .lookbook__img {
@@ -187,6 +198,12 @@
 .lookbook__item:nth-child(2),
 .lookbook__item:nth-child(3) {
   padding: 100px;
+}
+
+.lookbook__img {
+  width: 100%;
+  height: 100%;
+  background-color: violet;
 }
 
 .lookbook__item:nth-child(2) .lookbook__img,
