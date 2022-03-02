@@ -50,13 +50,11 @@
 
 // filter
 
-const categoryBtnContainer = document.querySelector(".category__filter");
-const productContainer = document.querySelector(".product");
-const products = document.querySelectorAll(".product__img");
-const shopInfo = document.querySelectorAll(".shop__info");
+const categoryBtnContainer = document.querySelector(".category__items");
+const productContainer = document.querySelector(".category__products");
+const products = document.querySelectorAll(".product");
 
 categoryBtnContainer.addEventListener("click", (e) => {
-  console.log("click");
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter == null) {
     return;
@@ -68,7 +66,7 @@ categoryBtnContainer.addEventListener("click", (e) => {
     e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
   e.target.classList.add("selected");
 
-  productContainer.classList.add("anim-out");
+  productContainer.classList.add("filter__animation");
   setTimeout(() => {
     products.forEach((product) => {
       if (filter === "*" || filter === product.dataset.type) {
@@ -77,6 +75,6 @@ categoryBtnContainer.addEventListener("click", (e) => {
         product.classList.add("invisible");
       }
     });
-    productContainer.classList.remove("anim-out");
+    productContainer.classList.remove("filter__animation");
   }, 300);
 });
