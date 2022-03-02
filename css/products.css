@@ -1,7 +1,7 @@
 /* products */
 
-#products__body {
-  background-color: var(--color-white);
+.product__main {
+  margin-bottom: 100px;
 }
 
 .pages__title {

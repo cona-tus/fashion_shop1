@@ -5,6 +5,8 @@
 @import "/css/main.css";
 @import "/css/footer.css";
 @import "/css/products.css";
+@import "/css/about.css";
+@import "/css/contact.css";
 
 /* global */
 :root {
@@ -169,7 +171,7 @@ body {
 
 .shop__info .shop__price {
   color: var(--color-black);
-  font-size: var(--font-micro);
+  font-size: var(--font-small);
   font-weight: var(--weight-regular);
   letter-spacing: 0.5px;
   margin-bottom: 10px;
