@@ -128,6 +128,28 @@ body {
   color: var(--color-black);
 }
 
+@keyframes appear-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes appear-out {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
 .shop__info {
   display: flex;
   flex-direction: column;
@@ -168,4 +190,23 @@ body {
   font-size: var(--font-micro);
   font-weight: var(--weight-light);
   text-transform: uppercase;
+}
+
+/* shop price */
+
+.shop__price {
+  position: relative;
+}
+
+.shop__price span {
+  margin-right: 10px;
+}
+
+.shop__underbar {
+  width: 24px;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  background-color: var(--color-black);
 }
