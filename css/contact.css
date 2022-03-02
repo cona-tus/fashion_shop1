@@ -1,0 +1,153 @@
+.contact__section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 100vh;
+  padding: 0 140px;
+}
+
+.contact__text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.contact__description {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.contact__subtitle {
+  color: var(--color-black);
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-medium);
+  font-style: italic;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.contact__title {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-black);
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+  letter-spacing: 1.2px;
+}
+
+.contact__text p {
+  width: 80%;
+  color: var(--color-black);
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-small);
+  font-weight: var(--weight-light);
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.contact__adress {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.contact__adress h2 {
+  color: var(--color-black);
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  letter-spacing: 2px;
+}
+
+.contact__adress span {
+  color: var(--color-black);
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-small);
+  font-weight: var(--weight-light);
+  letter-spacing: 1px;
+}
+
+.contact__icon {
+  color: var(--color-black);
+  font-size: var(--font-small);
+  font-weight: var(--weight-light);
+  letter-spacing: 5px;
+}
+
+.contact__icon i {
+  transition: transform 0.2s ease-in;
+}
+
+.contact__icon i:hover {
+  transform: scale(1.2);
+}
+
+.contact__form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 100px 0;
+}
+
+.contact__email,
+.contact__name {
+  border: none;
+  border-bottom: 2px solid var(--color-black);
+  background-color: transparent;
+  padding: 10px;
+}
+
+.contact__message {
+  line-height: 200px;
+  padding: 10px;
+  border: 2px solid var(--color-black);
+  background-color: transparent;
+}
+
+.contact__email::placeholder,
+.contact__name::placeholder,
+.contact__message::placeholder {
+  color: var(--color-black);
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-small);
+  font-weight: var(--weight-light);
+  letter-spacing: 1px;
+}
+
+.contact__email:focus,
+.contact__name:focus,
+.contact__message:focus {
+  outline: none;
+}
+
+.contact__button {
+  cursor: pointer;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-regular);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 24px;
+  transition: all 0.2s ease-in;
+  border: 2px solid var(--color-black);
+}
+
+.contact__button:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 2px solid var(--color-black);
+}
