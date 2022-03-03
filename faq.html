@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conatus | FAQ</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="main.js" defer></script>
     <script
       src="https://kit.fontawesome.com/5c9cf55bcf.js"
       crossorigin="anonymous"
@@ -18,7 +17,7 @@
     />
   </head>
 
-  <body id="contact__body">
+  <body id="faq__body">
     <header class="header">
       <nav class="navigation">
         <ul class="navbar">
@@ -99,7 +98,87 @@
       </article>
     </header>
 
-    <main class="faq__main"></main>
+    <main class="faq__main">
+      <section class="faq__section">
+        <div class="faq__sidebar">
+          <h1 class="category__subtitle">New Styles, New Ideas.</h1>
+
+          <form class="category__form">
+            <input
+              type="text"
+              class="category__input"
+              placeholder="Search"
+              required
+            />
+            <button type="submit" class="category__submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <p>Everythig you need to know about Conatus.</p>
+        </div>
+
+        <div class="faq__part">
+          <h1 class="faq__title">FREQUENTLY ASKED QUESTIONS</h1>
+          <div class="accordion">
+            <ul class="accordion__items">
+              <li class="accordion__label">
+                How long will it take to receive my order?
+                <div class="accordion__icon"></div>
+              </li>
+              <li class="accrodion__item">
+                <p>Quas blanditiis placeat maxime aspernatur doloribus vel.</p>
+              </li>
+            </ul>
+            <ul class="accordion__items">
+              <li class="accordion__label">
+                What's your return policy?
+                <div class="accordion__icon"></div>
+              </li>
+              <li class="accrodion__item">
+                <p>Blanditiis placeat maxime aspernatur doloribus vel.</p>
+              </li>
+            </ul>
+            <ul class="accordion__items">
+              <li class="accordion__label">
+                What is your pricing policy?
+                <div class="accordion__icon"></div>
+              </li>
+              <li class="accrodion__item">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Debitis at ut, quas blanditiis placeat maxime aspernatur
+                  doloribus vel.
+                </p>
+              </li>
+            </ul>
+            <ul class="accordion__items">
+              <li class="accordion__label">
+                How do I cancle my order?
+                <div class="accordion__icon"></div>
+              </li>
+              <li class="accrodion__item">
+                <p>
+                  Dolor sit amet consectetur adipisicing elit. Debitis at ut,
+                  quas blanditiis placeat maxime aspernatur doloribus vel. Lorem
+                  ipsum dolor sit.
+                </p>
+              </li>
+            </ul>
+            <ul class="accordion__items">
+              <li class="accordion__label">
+                How do I return my order to store?
+                <div class="accordion__icon"></div>
+              </li>
+              <li class="accrodion__item">
+                <p>
+                  Ipsum dolor sit amet placeat maxime aspernatur doloribus vel.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <section class="info__section">
@@ -164,5 +243,15 @@
         </ul>
       </section>
     </footer>
+    <script>
+      const accordionItems =
+        document.getElementsByClassName("accordion__items");
+
+      for (i = 0; i < accordionItems.length; i++) {
+        accordionItems[i].addEventListener("click", function () {
+          this.classList.toggle("open");
+        });
+      }
+    </script>
   </body>
 </html>

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conatus | Contact</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="main.js" defer></script>
     <script
       src="https://kit.fontawesome.com/5c9cf55bcf.js"
       crossorigin="anonymous"
@@ -209,5 +208,17 @@
         </ul>
       </section>
     </footer>
+    <script>
+      let map;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 37.56353484183652, lng: 126.9783009492541 },
+          zoom: 20,
+        });
+      }
+
+      initMap();
+    </script>
   </body>
 </html>
