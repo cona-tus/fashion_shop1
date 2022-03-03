@@ -106,7 +106,7 @@
   border-radius: 4px;
   background-color: var(--color-white);
   padding: 6px 10px;
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 .newsletter__input:focus {
