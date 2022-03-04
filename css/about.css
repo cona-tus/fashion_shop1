@@ -31,60 +31,45 @@
 }
 
 .about__text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+
   position: sticky;
   top: 0;
   left: 0;
-  padding: 200px;
+  padding: 100px 120px;
 }
 
 .about__title {
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 
 .about__title h1 {
   color: var(--color-black);
-  font-family: "Roboto", sans-serif;
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  letter-spacing: 1px;
-}
-
-.about__title > span {
-  color: var(--color-black);
-  font-family: "Roboto", sans-serif;
-  font-size: var(--font-micro);
+  font-size: var(--font-regular);
   font-weight: var(--weight-medium);
-  font-style: italic;
-  letter-spacing: 1px;
 }
 
-.about__info {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-}
-
-.about__info p {
+.about__title span {
   color: var(--color-black);
   font-size: var(--font-small);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-regular);
+  text-decoration: underline;
+}
+
+.about__description {
+  color: var(--color-black);
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
   line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.about__info .big {
-  font-weight: var(--weight-medium);
+  letter-spacing: 1px;
 }
 
 .about__subtitle {
@@ -95,8 +80,7 @@
 
 .about__subtitle span {
   color: var(--color-black);
-  font-family: "Roboto", sans-serif;
   font-size: var(--font-micro);
-  font-weight: var(--weight-medium);
-  letter-spacing: 1px;
+  font-weight: var(--weight-regular);
+  font-style: italic;
 }
