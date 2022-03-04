@@ -100,25 +100,13 @@
 
     <main class="faq__main">
       <section class="faq__section">
-        <div class="faq__sidebar">
-          <h1 class="category__subtitle">New Styles, New Ideas.</h1>
-
-          <form class="category__form">
-            <input
-              type="text"
-              class="category__input"
-              placeholder="Search"
-              required
-            />
-            <button type="submit" class="category__submit">
-              <i class="fas fa-search"></i>
-            </button>
-          </form>
-          <p>Everythig you need to know about Conatus.</p>
-        </div>
-
+        <ul class="faq__imgs">
+          <li class="faq__img"></li>
+          <li class="faq__img"></li>
+          <li class="faq__img"></li>
+        </ul>
         <div class="faq__part">
-          <h1 class="faq__title">FREQUENTLY ASKED QUESTIONS</h1>
+          <h1 class="faq__title">Frequently Asked Questions.</h1>
           <div class="accordion">
             <ul class="accordion__items">
               <li class="accordion__label">
@@ -244,12 +232,14 @@
       </section>
     </footer>
     <script>
+      const OPEN_CLASS = "open";
       const accordionItems =
         document.getElementsByClassName("accordion__items");
+      const currentItem = document.querySelector(`.${OPEN_CLASS}`);
 
       for (i = 0; i < accordionItems.length; i++) {
         accordionItems[i].addEventListener("click", function () {
-          this.classList.toggle("open");
+          this.classList.toggle(OPEN_CLASS);
         });
       }
     </script>
