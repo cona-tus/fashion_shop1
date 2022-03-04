@@ -1,0 +1,113 @@
+#account__body {
+  font-family: "Roboto", sans-serif;
+}
+
+.account__main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.account__section {
+  width: 100%;
+  height: 100%;
+  padding: 100px 120px;
+}
+
+.account__category {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account__category h4 {
+  cursor: pointer;
+  width: 33%;
+  color: var(--color-gray);
+  font-size: var(--font-micro);
+  font-weight: var(--weight-regular);
+  transition: color 0.2s ease-out;
+}
+
+.account__category h4:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+.account__category h4:nth-child(3) {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.account__category h4:hover {
+  color: var(--color-black);
+}
+
+.account__form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.account__form input {
+  margin-bottom: 20px;
+  border: none;
+  border: 1px solid var(--color-gray);
+  background-color: transparent;
+  padding: 10px 20px;
+}
+
+.account__form input:focus {
+  outline: none;
+  border: 1px solid var(--color-black);
+}
+
+.account__button {
+  cursor: pointer;
+  background-color: var(--color-light-gray);
+  color: var(--color-black);
+  font-size: var(--font-micro);
+  font-weight: var(--weight-regular);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 15px 20px;
+  transition: all 0.2s ease-out;
+  border: none;
+  margin-top: 20px;
+}
+
+.account__button:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.account__title {
+  color: var(--color-black);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+
+.account__form label {
+  color: var(--color-gray);
+  font-size: var(--font-micro);
+  font-weight: var(--weight-regular);
+  margin-bottom: 10px;
+}
+
+.account__img {
+  width: 100%;
+  height: 100%;
+  background: url("/img/account.png") center / cover;
+}
+
+.account__form.invisible {
+  display: none;
+}

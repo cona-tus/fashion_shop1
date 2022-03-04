@@ -16,94 +16,114 @@
       rel="stylesheet"
     />
   </head>
-</html>
-<body id="login__body">
-  <header class="header">
-    <nav class="navigation">
-      <ul class="navbar">
-        <li id="logo" class="nav__menu">
-          Conatus.
-          <span>Conatus.</span>
-        </li>
-        <li class="nav__menu">
-          <ul class="navbar__column">
-            <li class="nav__title"><a href="index.html">HOME</a></li>
-            <li class="nav__title">
-              <a href="#">PAGES</a>
-              <ul class="dropdown__menu">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">FAQ Page</a></li>
-              </ul>
-            </li>
-            <li class="nav__title">
-              <a href="#">SHOP</a>
-              <ul class="dropdown">
-                <li class="dropdown__column">
-                  <ul>
-                    <li class="dropdown__title">SHOP TYPES</li>
-                    <li><a href="#">Right Sidebar</a></li>
-                    <li><a href="#">Left Sidebar</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown__column">
-                  <ul>
-                    <li class="dropdown__title">SHOP LAYOUTS</li>
-                    <li><a href="#">Two Columns</a></li>
-                    <li><a href="#">Three Columns</a></li>
-                    <li><a href="#">Four Columns</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown__column">
-                  <ul>
-                    <li class="dropdown__title">PRODUCT TYPES</li>
-                    <li><a href="#">Standard Product</a></li>
-                    <li><a href="#">Gallery Product</a></li>
-                    <li><a href="#">Big Images Product</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown__column">
-                  <ul>
-                    <li class="dropdown__title">SHOP PAGES</li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">Wish List</a></li>
-                    <li><a href="#">Cart</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+  <body id="account__body">
+    <header class="header">
+      <nav class="navigation">
+        <ul class="navbar">
+          <li id="logo" class="nav__menu">
+            Conatus.
+            <span>Conatus.</span>
+          </li>
+          <li class="nav__menu">
+            <ul class="navbar__column">
+              <li class="nav__title"><a href="index.html">HOME</a></li>
+              <li class="nav__title">
+                <a href="#">PAGES</a>
+                <ul class="dropdown__menu">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">FAQ Page</a></li>
+                </ul>
+              </li>
+              <li class="nav__title">
+                <a href="#">SHOP</a>
+                <ul class="dropdown">
+                  <li class="dropdown__column">
+                    <ul>
+                      <li class="dropdown__title">SHOP TYPES</li>
+                      <li><a href="#">Right Sidebar</a></li>
+                      <li><a href="#">Left Sidebar</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown__column">
+                    <ul>
+                      <li class="dropdown__title">SHOP LAYOUTS</li>
+                      <li><a href="#">Two Columns</a></li>
+                      <li><a href="#">Three Columns</a></li>
+                      <li><a href="#">Four Columns</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown__column">
+                    <ul>
+                      <li class="dropdown__title">PRODUCT TYPES</li>
+                      <li><a href="#">Standard Product</a></li>
+                      <li><a href="#">Gallery Product</a></li>
+                      <li><a href="#">Big Images Product</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown__column">
+                    <ul>
+                      <li class="dropdown__title">SHOP PAGES</li>
+                      <li><a href="#">My Account</a></li>
+                      <li><a href="#">Wish List</a></li>
+                      <li><a href="#">Cart</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
 
-        <li class="nav__menu">
-          <ul class="navbar__column">
-            <li>
-              <a href="#"><i class="fa fa-user"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-search fa"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa fa-heart"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fas fa-shopping-bag"></i></a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="account__main">
-          <ul class="account__menu">
-              <li>Login</li>
-              <li>Sign Up</li>
-              <li>Reset Pass</li>
-          </ul>
-    <section class="account__section">
-      <ul class="login__items">
-        <li class="account__title">Login</li>
+          <li class="nav__menu">
+            <ul class="navbar__column">
+              <li>
+                <a href="#"><i class="fa fa-user"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-search fa"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-heart"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="pages__title">
+        <h1>My Account :</h1>
+      </article>
+    </header>
+    <main class="account__main">
+      <section class="account__section">
+        <div class="account__category">
+          <h4 class="login">Login</h4>
+          <h4 class="signup">Sign Up</h4>
+          <h4 class="reset">Reset Pass</h4>
+        </div>
         <form class="account__form">
+          <h2 class="account__title">Login</h2>
+          <label for="email">Please enter your e-mail and password:</label>
+          <input
+            type="email"
+            class="account__email"
+            placeholder="E-mail adress"
+            required
+          />
+          <input
+            type="password"
+            class="account__pass"
+            placeholder="Password"
+            required
+          />
+
+          <button type="submit" class="account__button">Login</button>
+        </form>
+        <form class="account__form invisible">
+          <h2 class="account__title">Sign Up</h2>
+          <label for="email">Please enter your e-mail and password:</label>
           <input
             type="email"
             class="account__email"
@@ -118,39 +138,113 @@
           />
           <button type="submit" class="account__button">Login</button>
         </form>
-      </ul>
-      <ul class="register__items">
-        <li class="account__title">Sign Up</li>
-        <form class="account__form">
+        <form class="account__form invisible">
+          <h2 class="account__title">Reset Password</h2>
+          <label for="email"
+            >You will receive a link to create a new password via email.</label
+          >
           <input
             type="email"
             class="account__email"
             placeholder="E-mail adress"
             required
           />
-          <input
-            type="password"
-            class="account__pass"
-            placeholder="Password"
-            required
-          />
-          <button type="submit" class="account__button">Register</button>
+          <button type="submit" class="account__button">Login</button>
         </form>
-      </ul>
-      <ul class="reset__items">
-        <li class="account__title">
-          Reset Password</li>
-          <form class="account__form">
+      </section>
+      <div class="account__img"></div>
+    </main>
+    <footer class="footer">
+      <section class="info__section">
+        <ul class="info__items">
+          <li id="logo" class="nav__menu">
+            Conatus.
+            <span>Conatus.</span>
+          </li>
+          <li class="info__item">New Direction, New Styles.</li>
+        </ul>
+        <ul class="info__items">
+          <li class="info__title">Conatus.</li>
+          <li class="info__item">
+            <a href="#" class="portfolio">Portfolio</a>
+          </li>
+          <li class="info__item">
+            <a href="#" class="git">
+              <i class="fa fa-github"></i>
+            </a>
+            <a href="#" class="mail">
+              <i class="fa fa-envelope"></i>
+            </a>
+            <a href="#" class="instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="info__items">
+          <li class="info__title">Company</li>
+          <li class="info__item">
+            <a href="#">About us</a>
+          </li>
+          <li class="info__item">
+            <a href="#">Contact us</a>
+          </li>
+          <li class="info__item">
+            <a href="#">FAQ</a>
+          </li>
+        </ul>
+        <ul class="info__items">
+          <form class="newsletter__form">
+            <label for="email" class="info__title">Subscribe us</label>
             <input
               type="email"
-              class="account__email"
-              placeholder="E-mail adress"
+              class="newsletter__input"
+              placeholder="Email adress"
               required
             />
-            <button type="submit" class="account__button">Reset</button>
+            <button type="submit" class="newsletter__button">
+              <i class="fas fa-envelope"></i>
+            </button>
           </form>
-        </li>
-      </ul>
-    </section>
-  </main>
-</body>
+          <li class="info__item">
+            <a href="#" class="facebook"><i class="fa fa-facebook-f"></i></a>
+            <a href="#" class="instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="#" class="twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <script>
+      // const INVISIBLE_CLASS = "invisible";
+      // const loginButton = document.querySelector(".login__button");
+      // const signButton = document.querySelector(".sign__button");
+      // const resetButton = document.querySelector(".reset__button");
+      // const loginItems = document.querySelector(".account__items:nth-child(1)");
+      // const signItems = document.querySelector(".account__items:nth-child(2)");
+      // const resetItems = document.querySelector(".account__items:nth-child(3)");
+      // const accountSection = document.querySelector(".account__section");
+
+      // loginButton.addEventListener("click", ()=>{
+      // loginItems.classList.remove(INVISIBLE_CLASS);
+      // signItems.classList.add(INVISIBLE_CLASS);
+      // resetItems.classList.add(INVISIBLE_CLASS);
+      // })
+
+      // signButton.addEventListener("click", ()=>{
+      // loginItems.classList.add(INVISIBLE_CLASS);
+      // signItems.classList.remove(INVISIBLE_CLASS);
+      // resetItems.classList.add(INVISIBLE_CLASS);
+      // })
+
+      // resetButton.addEventListener("click", ()=>{
+      // loginItems.classList.add(INVISIBLE_CLASS);
+      // signItems.classList.add(INVISIBLE_CLASS);
+      // resetItems.classList.remove(INVISIBLE_CLASS);
+
+      // })
+    </script>
+  </body>
+</html>
