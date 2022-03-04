@@ -99,17 +99,34 @@
 
     <main class="contact__main">
       <section class="contact__section">
-        <ul class="contact__text">
-          <li class="contact__description">
-            <h1 class="contact__title">
-              <span class="contact__subtitle">Conatus.</span>
-              Hello, World!
-            </h1>
-            <p>Sit amet consectetur adipisicing elit. Quisquam, consectetur!</p>
-          </li>
-          <li class="contact__adress">
-            <h2>Seoul</h2>
-            <span> 16-7, Sejong-daero 18-gil, Jung-gu </span>
+        <ul class="contact__imgs">
+          <li class="contact__img"></li>
+          <li class="contact__img"></li>
+          <li class="contact__img"></li>
+        </ul>
+        <div class="contact__text">
+          <div class="contact__title">
+            <h1>Conatus.</h1>
+            <span>Contact</span>
+          </div>
+          <form class="contact__form">
+            <input
+              type="email"
+              class="contact__email"
+              placeholder="E-mail adress"
+              required
+            />
+            <input
+              type="text"
+              class="contact__name"
+              placeholder="Name"
+              required
+            />
+            <textarea class="contact__message">Message</textarea>
+            <button type="submit" class="contact__button">Send Message</button>
+          </form>
+          <div class="contact__adress">
+            <h2>Seoul. 16-7, Sejong-daero 18-gil, Jung-gu.</h2>
             <span>+82 10-1234-5678 </span>
             <span>cona_tus@naver.com </span>
             <div class="contact__icon">
@@ -121,27 +138,9 @@
                 <i class="fa fa-twitter"></i>
               </a>
             </div>
-          </li>
-        </ul>
-
-        <form class="contact__form">
-          <input
-            type="email"
-            class="contact__email"
-            placeholder="E-mail adress"
-            required
-          />
-          <input
-            type="text"
-            class="contact__name"
-            placeholder="Name"
-            required
-          />
-          <textarea class="contact__message">Message</textarea>
-          <button type="submit" class="contact__button">Send Message</button>
-        </form>
+          </div>
+        </div>
       </section>
-
       <div id="map"></div>
     </main>
 
