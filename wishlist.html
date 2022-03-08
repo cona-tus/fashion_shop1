@@ -100,24 +100,27 @@
 
     <main class="wishlist__main">
       <section class="wishlist__section">
-        <div class="wishlist__items">
+        <div class="wishlist__header">
           <h4 class="wishlist__title">Product Name</h4>
-          <img src="/img/t01.png" />
-          <span class="wishlist__subtitle">Alexandra</span>
-        </div>
-        <div class="wishlist__items">
           <h4 class="wishlist__title">Unit Price</h4>
-          <span class="wishlist__subtitle">30$</span>
-        </div>
-        <div class="wishlist__items">
           <h4 class="wishlist__title">Stock Status</h4>
-          <span class="wishlist__subtitle">In Stock</span>
+          <h4 class="wishlist__title">Options</h4>
         </div>
-        <div class="wishlist__items">
-          <h4 class="wishlist__title">Option</h4>
-          <span class="wishlist__subtitle">Add to cart</span>
-          <span class="wishlist__subtitle">Delete</span>
-        </div>
+
+        <ul class="wishlist__items">
+          <li class="wishlist__item">
+            <a href="#" class="wishlist__img">
+              <img src="/img/t01.png" />
+              <span class="wishlist__subtitle">Alexandra</span>
+            </a>
+            <span class="wishlist__subtitle">30$</span>
+            <span class="wishlist__subtitle">In Stock</span>
+            <div class="wishlist__status">
+              <a href="#" class="wishlist__subtitle">Add to cart</a>
+              <a href="#" class="wishlist__subtitle">Delete</a>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
 
@@ -162,18 +165,5 @@
         </ul>
       </section>
     </footer>
-
-    <script>
-      const OPEN_CLASS = "open";
-      const accordionItems =
-        document.getElementsByClassName("accordion__items");
-      const currentItem = document.querySelector(`.${OPEN_CLASS}`);
-
-      for (i = 0; i < accordionItems.length; i++) {
-        accordionItems[i].addEventListener("click", function () {
-          this.classList.toggle(OPEN_CLASS);
-        });
-      }
-    </script>
   </body>
 </html>
