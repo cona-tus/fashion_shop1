@@ -99,11 +99,15 @@
     <main class="account__main">
       <section class="account__section">
         <div class="account__category">
-          <h4 class="login">Login</h4>
-          <h4 class="signup">Sign Up</h4>
-          <h4 class="reset">Reset Pass</h4>
+          <button class="account__button selected" data-filter="login">
+            Login
+          </button>
+          <button class="account__button" data-filter="sign">Sign Up</button>
+          <button class="account__button" data-filter="reset">
+            Reset Pass
+          </button>
         </div>
-        <form class="account__form">
+        <form class="account__form" data-type="login">
           <h2 class="account__title">Login</h2>
           <label for="email">Please enter your e-mail and password:</label>
           <input
@@ -119,11 +123,23 @@
             required
           />
 
-          <button type="submit" class="account__button">Login</button>
+          <button type="submit" class="submit__button">Login</button>
         </form>
-        <form class="account__form invisible">
+        <form class="account__form invisible" data-type="sign">
           <h2 class="account__title">Sign Up</h2>
-          <label for="email">Please enter your e-mail and password:</label>
+          <label for="email">Please fill in the information below:</label>
+          <input
+            type="text"
+            class="account__firstname"
+            placeholder="First name"
+            required
+          />
+          <input
+            type="text"
+            class="account__lastname"
+            placeholder="Last name"
+            required
+          />
           <input
             type="email"
             class="account__email"
@@ -136,9 +152,9 @@
             placeholder="Password"
             required
           />
-          <button type="submit" class="account__button">Login</button>
+          <button type="submit" class="submit__button">Sign Up</button>
         </form>
-        <form class="account__form invisible">
+        <form class="account__form invisible" data-type="reset">
           <h2 class="account__title">Reset Password</h2>
           <label for="email"
             >You will receive a link to create a new password via email.</label
@@ -149,10 +165,9 @@
             placeholder="E-mail adress"
             required
           />
-          <button type="submit" class="account__button">Login</button>
+          <button type="submit" class="submit__button">Recover</button>
         </form>
       </section>
-      <div class="account__img"></div>
     </main>
     <footer class="footer">
       <section class="info__section">
@@ -218,33 +233,31 @@
       </section>
     </footer>
     <script>
-      // const INVISIBLE_CLASS = "invisible";
-      // const loginButton = document.querySelector(".login__button");
-      // const signButton = document.querySelector(".sign__button");
-      // const resetButton = document.querySelector(".reset__button");
-      // const loginItems = document.querySelector(".account__items:nth-child(1)");
-      // const signItems = document.querySelector(".account__items:nth-child(2)");
-      // const resetItems = document.querySelector(".account__items:nth-child(3)");
-      // const accountSection = document.querySelector(".account__section");
+      const accountBtnContainer = document.querySelector(".account__category");
+      const accountForms = document.querySelectorAll(".account__form");
+      const accountBtn = document.getElementsByClassName("account__button");
 
-      // loginButton.addEventListener("click", ()=>{
-      // loginItems.classList.remove(INVISIBLE_CLASS);
-      // signItems.classList.add(INVISIBLE_CLASS);
-      // resetItems.classList.add(INVISIBLE_CLASS);
-      // })
+      accountBtnContainer.addEventListener("click", (e) => {
+        const filter =
+          e.target.dataset.filter || e.target.parentNode.dataset.filter;
+        if (filter == null) {
+          return;
+        }
 
-      // signButton.addEventListener("click", ()=>{
-      // loginItems.classList.add(INVISIBLE_CLASS);
-      // signItems.classList.remove(INVISIBLE_CLASS);
-      // resetItems.classList.add(INVISIBLE_CLASS);
-      // })
+        const active = document.querySelector(".account__button.selected");
+        active.classList.remove("selected");
+        const target =
+          e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+        e.target.classList.add("selected");
 
-      // resetButton.addEventListener("click", ()=>{
-      // loginItems.classList.add(INVISIBLE_CLASS);
-      // signItems.classList.add(INVISIBLE_CLASS);
-      // resetItems.classList.remove(INVISIBLE_CLASS);
-
-      // })
+        accountForms.forEach((form) => {
+          if (filter === form.dataset.type) {
+            form.classList.remove("invisible");
+          } else {
+            form.classList.add("invisible");
+          }
+        });
+      });
     </script>
   </body>
 </html>

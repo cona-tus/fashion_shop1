@@ -5,14 +5,13 @@
 .account__main {
   width: 100%;
   height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
 }
 
 .account__section {
-  width: 100%;
+  width: 50%;
   height: 100%;
   padding: 100px 120px;
+  margin: auto;
 }
 
 .account__category {
@@ -22,26 +21,33 @@
   align-items: center;
 }
 
-.account__category h4 {
+.account__button {
   cursor: pointer;
   width: 33%;
   color: var(--color-gray);
   font-size: var(--font-micro);
   font-weight: var(--weight-regular);
+  border: none;
+  background-color: transparent;
   transition: color 0.2s ease-out;
 }
 
-.account__category h4:nth-child(2) {
+.account__button:nth-child(1) {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.account__button:nth-child(2) {
   display: flex;
   justify-content: center;
 }
 
-.account__category h4:nth-child(3) {
+.account__button:nth-child(3) {
   display: flex;
   justify-content: flex-end;
 }
 
-.account__category h4:hover {
+.account__button:hover {
   color: var(--color-black);
 }
 
@@ -54,11 +60,11 @@
 }
 
 .account__form input {
-  margin-bottom: 20px;
   border: none;
   border: 1px solid var(--color-gray);
   background-color: transparent;
-  padding: 10px 20px;
+  margin-bottom: 30px;
+  padding: 10px;
 }
 
 .account__form input:focus {
@@ -66,7 +72,7 @@
   border: 1px solid var(--color-black);
 }
 
-.account__button {
+.submit__button {
   cursor: pointer;
   background-color: var(--color-light-gray);
   color: var(--color-black);
@@ -80,7 +86,7 @@
   margin-top: 20px;
 }
 
-.account__button:hover {
+.submit__button:hover {
   background-color: var(--color-black);
   color: var(--color-white);
 }
@@ -92,7 +98,7 @@
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 2px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .account__form label {
@@ -110,4 +116,9 @@
 
 .account__form.invisible {
   display: none;
+}
+
+.account__button.selected {
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
 }
