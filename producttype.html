@@ -102,18 +102,22 @@
         <div class="type__text">
           <h1 class="type__title">Helena</h1>
           <span class="type__price">30$</span>
-          <div class="quantity__button">
-            <button class="type__decrement" onclick="stepper(this)">-</button>
+
+          <div class="type__quantity">
             <input
-              class="type__quantity"
+              class="type__input"
               type="number"
               value="1"
               min="1"
               max="10"
             />
-            <button class="type__increment" onclick="stepper(this)">+</button>
+            <div class="type__buttons">
+              <button class="type__increment" onclick="stepper(this)">+</button>
+              <button class="type__decrement" onclick="stepper(this)">-</button>
+            </div>
+            <button class="addtocart__button">add to cart</button>
           </div>
-          <button class="cart__button">add to cart</button>
+
           <a class="like__button" href="#"
             ><i class="fa fa-heart"></i>add to wishlist</a
           >
@@ -131,6 +135,7 @@
       </section>
       <section class="related__section">
         <ul class="related__products">
+          <h1 class="related__title">RELATED PRODUCTS</h1>
           <li class="related__item">
             <img src="/img/t04.png" />
           </li>
