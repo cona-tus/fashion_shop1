@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conatus | Cart</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="/src/cart.js" defer></script>
     <script
       src="https://kit.fontawesome.com/5c9cf55bcf.js"
       crossorigin="anonymous"
@@ -114,16 +115,17 @@
               <span class="cart__product">Alexandra</span>
             </a>
             <span class="cart__price">30$</span>
-            <input class="cart__quantity" type="number" value="1" />
-            <button class="cart__remove">Delete</button>
-          </li>
-          <li class="cart__item">
-            <a href="#" class="cart__img">
-              <img src="/img/shoe01.png" />
-              <span class="cart__product">Ella</span>
-            </a>
-            <span class="cart__price">20$</span>
-            <input class="cart__quantity" type="number" value="1" />
+            <div class="quantity__button">
+              <button class="cart__decrement" onclick="stepper(this)">-</button>
+              <input
+                class="cart__quantity"
+                type="number"
+                value="1"
+                min="1"
+                max="10"
+              />
+              <button class="cart__increment" onclick="stepper(this)">+</button>
+            </div>
             <button class="cart__remove">Delete</button>
           </li>
         </ul>
@@ -132,8 +134,9 @@
           <h1 class="total__title">CART TOTALS</h1>
           <div class="cart__content">
             <span class="total__subtitle">Total</span>
-            <span class="total__price">$0</span>
+            <span class="total__price">$30</span>
           </div>
+
           <button class="checkout__button">Proceed to checkout</button>
         </div>
       </section>
