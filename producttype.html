@@ -221,5 +221,21 @@
         </ul>
       </section>
     </footer>
+
+    <script>
+      const typeInput = document.querySelector(".type__input");
+      function stepper(btn) {
+        let classNames = btn.getAttribute("class");
+        let min = typeInput.getAttribute("min");
+        let max = typeInput.getAttribute("max");
+        let step = typeInput.getAttribute("step");
+        let value = typeInput.getAttribute("value");
+        let calcStep = classNames == "type__increment" ? step + 1 : step + -1;
+        let newValue = parseInt(value) + calcStep;
+        if (newValue >= min && newValue <= max) {
+          typeInput.setAttribute("value", newValue);
+        }
+      }
+    </script>
   </body>
 </html>
