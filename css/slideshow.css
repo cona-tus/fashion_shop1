@@ -1,6 +1,6 @@
 /* slideshow */
 .slideshow__section {
-  height: 85vh;
+  height: 88vh;
   position: relative;
   transition: filter 0.3s ease-in-out;
 }

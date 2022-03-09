@@ -21,86 +21,62 @@
   <body>
     <!-- header -->
     <header class="header">
-      <nav class="navigation">
-        <ul class="navbar">
-          <li id="logo" class="nav__menu">
-            Conatus.
-            <span>Conatus.</span>
+      <nav class="navbar">
+        <div id="logo" class="navbar__column">
+          <a href="index.html">Conatus.</a>
+        </div>
+        <ul class="navbar__column">
+          <li class="navbar__menu"><a href="index.html">Home</a></li>
+          <li class="navbar__menu dropdown">
+            <a href="#">Company</a>
+            <ul class="dropdown__items">
+              <li class="dropdown__item"><a href="about.html">About</a></li>
+              <li class="dropdown__item"><a href="contact.html">Contact</a></li>
+              <li class="dropdown__item"><a href="faq.html">FAQ</a></li>
+            </ul>
           </li>
-
-          <li class="nav__menu">
-            <ul class="navbar__column">
-              <li class="nav__title"><a href="index.html">HOME</a></li>
-              <li class="nav__title">
-                <a href="#">PAGES</a>
-                <ul class="dropdown__menu">
-                  <li><a href="about.html">About Us</a></li>
-                  <li><a href="contact.html">Contact Us</a></li>
-                  <li><a href="faq.html">FAQ Page</a></li>
-                </ul>
+          <li class="navbar__menu dropdown">
+            <a href="#">Product</a>
+            <ul class="dropdown__items">
+              <li class="dropdown__item">
+                <a href="products.html">Sidebar</a>
               </li>
-              <li class="nav__title">
-                <a href="#">SHOP</a>
-                <ul class="dropdown">
-                  <li class="dropdown__column">
-                    <ul>
-                      <li class="dropdown__title">SHOP TYPES</li>
-                      <li><a href="#">Right Sidebar</a></li>
-                      <li><a href="#">Left Sidebar</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown__column">
-                    <ul>
-                      <li class="dropdown__title">SHOP LAYOUTS</li>
-                      <li><a href="#">Two Columns</a></li>
-                      <li><a href="#">Three Columns</a></li>
-                      <li><a href="#">Four Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown__column">
-                    <ul>
-                      <li class="dropdown__title">PRODUCT TYPES</li>
-                      <li><a href="#">Standard Product</a></li>
-                      <li><a href="#">Gallery Product</a></li>
-                      <li><a href="#">Big Images Product</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown__column">
-                    <ul>
-                      <li class="dropdown__title">SHOP PAGES</li>
-                      <li><a href="account.html">My Account</a></li>
-                      <li><a href="wishlist.html">Wish List</a></li>
-                      <li><a href="cart.html">Cart</a></li>
-                    </ul>
-                  </li>
-                </ul>
+              <li class="dropdown__item">
+                <a href="producttype.html">Details</a>
               </li>
             </ul>
           </li>
-
-          <li class="nav__menu">
-            <ul class="navbar__column">
-              <li>
-                <a href="account.html"><i class="fa fa-user"></i></a>
+          <li class="navbar__menu dropdown">
+            <a href="#">Shop</a>
+            <ul class="dropdown__items">
+              <li class="dropdown__item"><a href="account.html">Account</a></li>
+              <li class="dropdown__item">
+                <a href="wishlist.html">Wishlist</a>
               </li>
-              <li>
-                <i class="search__icon fas fa-search fa"></i>
-                <div class="search__screen">
-                  <i class="close__icon fas fa-times"></i>
-                  <input
-                    type="text"
-                    class="search__input"
-                    placeholder="Search..."
-                  />
-                </div>
-              </li>
-              <li>
-                <a href="wishlist.html"><i class="fa fa-heart"></i></a>
-              </li>
-              <li>
-                <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
-              </li>
+              <li class="dropdown__item"><a href="cart.html">Cart</a></li>
             </ul>
+          </li>
+        </ul>
+        <ul class="navbar__column">
+          <li class="navbar__menu">
+            <a href="account.html"><i class="fa fa-user"></i></a>
+          </li>
+          <li class="navbar__menu">
+            <i class="search__icon fas fa-search fa"></i>
+            <div class="search__screen">
+              <i class="close__icon fas fa-times"></i>
+              <input
+                type="text"
+                class="search__input"
+                placeholder="Search..."
+              />
+            </div>
+          </li>
+          <li class="navbar__menu">
+            <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+          </li>
+          <li class="navbar__menu">
+            <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
           </li>
         </ul>
       </nav>
@@ -172,9 +148,9 @@
                 <img src="img/t01.png" />
               </div>
               <div class="shop__icon">
-                <a href="#"><i class="fa fa-eye"></i></a>
-                <a href="#"><i class="fa fa-heart"></i></a>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                <a href="producttype.html"><i class="fa fa-eye"></i></a>
+                <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
               </div>
             </li>
             <div class="shop__info">
@@ -188,9 +164,9 @@
                 <img src="img/t02.png" />
               </div>
               <div class="shop__icon">
-                <a href="#"><i class="fa fa-eye"></i></a>
-                <a href="#"><i class="fa fa-heart"></i></a>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                <a href="producttype.html"><i class="fa fa-eye"></i></a>
+                <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
               </div>
             </li>
             <div class="shop__info">
@@ -204,9 +180,9 @@
                 <img src="img/t03.png" />
               </div>
               <div class="shop__icon">
-                <a href="#"><i class="fa fa-eye"></i></a>
-                <a href="#"><i class="fa fa-heart"></i></a>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                <a href="producttype.html"><i class="fa fa-eye"></i></a>
+                <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
               </div>
             </li>
             <div class="shop__info">
@@ -220,9 +196,9 @@
                 <img src="img/t04.png" />
               </div>
               <div class="shop__icon">
-                <a href="#"><i class="fa fa-eye"></i></a>
-                <a href="#"><i class="fa fa-heart"></i></a>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                <a href="producttype.html"><i class="fa fa-eye"></i></a>
+                <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
               </div>
             </li>
             <div class="shop__info">
@@ -236,9 +212,9 @@
                 <img src="img/t05.png" />
               </div>
               <div class="shop__icon">
-                <a href="#"><i class="fa fa-eye"></i></a>
-                <a href="#"><i class="fa fa-heart"></i></a>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                <a href="producttype.html"><i class="fa fa-eye"></i></a>
+                <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
               </div>
             </li>
             <div class="shop__info">
@@ -252,9 +228,9 @@
                 <img src="img/t06.png" />
               </div>
               <div class="shop__icon">
-                <a href="#"><i class="fa fa-eye"></i></a>
-                <a href="#"><i class="fa fa-heart"></i></a>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                <a href="producttype.html"><i class="fa fa-eye"></i></a>
+                <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
               </div>
             </li>
             <div class="shop__info">
@@ -302,9 +278,9 @@
               <div class="lookbook__img">
                 <!-- <img src="/img/shoe01.png" /> -->
                 <div class="shop__icon">
-                  <a href="#"><i class="fa fa-eye"></i></a>
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                  <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                  <a href="producttype.html"><i class="fa fa-eye"></i></a>
+                  <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+                  <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
                 </div>
                 <div class="shop__sale">
                   <span>NEW</span>
@@ -321,9 +297,9 @@
             <li class="lookbook__item">
               <div class="lookbook__img">
                 <div class="shop__icon">
-                  <a href="#"><i class="fa fa-eye"></i></a>
-                  <a href="#"><i class="fa fa-heart"></i></a>
-                  <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                  <a href="producttype.html"><i class="fa fa-eye"></i></a>
+                  <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+                  <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
                 </div>
                 <div class="shop__sale">
                   <span>SALE</span>
