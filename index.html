@@ -68,9 +68,9 @@
                   <li class="dropdown__column">
                     <ul>
                       <li class="dropdown__title">SHOP PAGES</li>
-                      <li><a href="#">My Account</a></li>
-                      <li><a href="#">Wish List</a></li>
-                      <li><a href="#">Cart</a></li>
+                      <li><a href="account.html">My Account</a></li>
+                      <li><a href="wishlist.html">Wish List</a></li>
+                      <li><a href="cart.html">Cart</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -84,13 +84,21 @@
                 <a href="account.html"><i class="fa fa-user"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-search fa"></i></a>
+                <i class="search__icon fas fa-search fa"></i>
+                <div class="search__screen">
+                  <i class="close__icon fas fa-times"></i>
+                  <input
+                    type="text"
+                    class="search__input"
+                    placeholder="Search..."
+                  />
+                </div>
               </li>
               <li>
-                <a href="#"><i class="fa fa-heart"></i></a>
+                <a href="wishlist.html"><i class="fa fa-heart"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
               </li>
             </ul>
           </li>
@@ -441,5 +449,19 @@
         </ul>
       </section>
     </footer>
+
+    <script>
+      const searchButton = document.querySelector(".search__icon");
+      searchButton.addEventListener("click", () => {
+        const searchScreen = document.querySelector(".search__screen");
+        searchScreen.classList.add("active");
+      });
+
+      const closeButton = document.querySelector(".close__icon");
+      closeButton.addEventListener("click", () => {
+        const searchScreen = document.querySelector(".search__screen");
+        searchScreen.classList.remove("active");
+      });
+    </script>
   </body>
 </html>
