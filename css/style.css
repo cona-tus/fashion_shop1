@@ -14,75 +14,39 @@
 @import "/css/producttype.css";
 
 /* global */
-:root {
-  /* Color */
-  --color-white: #ffffff;
-  --color-black: #050707;
-  --color-gray: #808080;
-  --color-light-gray: #d8dade;
-
-  /* Font size */
-  --font-large: 62px;
-  --font-medium: 36px;
-  --font-regular: 20px;
-  --font-small: 16px;
-  --font-micro: 12px;
-
-  /* Font weight */
-  --weight-extra-bold: 900;
-  --weight-bold: 700;
-  --weight-semi-bold: 600;
-  --weight-medium: 500;
-  --weight-regular: 400;
-  --weight-light: 300;
-  --weight-extra-light: 200;
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: var(--color-white);
+  font-family: "Roboto", sans-serif;
 }
 
 /* logo */
-#logo {
-  position: relative;
-  color: var(--color-black);
-  font-size: var(--font-medium);
-  font-weight: var(--weight-bold);
-  font-family: "Titillium Web", sans-serif;
-  letter-spacing: -1px;
-}
-
-#logo span {
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  color: var(--color-white);
-  -webkit-text-stroke: 1px var(--color-black);
+#logo img {
+  width: 150px;
+  height: auto;
 }
 
 .copy__logo {
-  padding: 2px 6px;
-  margin-left: 100px;
   border: 1px solid var(--color-white);
   border-radius: 2px;
+  padding: 2px 6px;
+  margin-left: 100px;
 }
 
-/* more button */
+/* start see more button */
 .more__button {
   position: relative;
-  padding: 10px 0;
-  margin-top: 30px;
   color: var(--color-white);
   font-size: var(--font-small);
   font-weight: var(--weight-medium);
-  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
-  transition: all 0.3s ease-in-out;
+  padding: 10px 0;
+  margin-top: 30px;
   opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .more__button-bar {
@@ -94,15 +58,6 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.story__item .more__button {
-  color: var(--color-black);
-  opacity: 1;
-}
-
-.story__item .more__button-bar {
-  background-color: var(--color-black);
-}
-
 .more__button:hover {
   transition: all 0.3s ease-in-out;
 }
@@ -112,8 +67,9 @@ body {
   height: 2px;
   transition: all 0.3s ease-in-out;
 }
+/* end see more button */
 
-/* shop info */
+/* start shop info */
 .shop__icon {
   position: absolute;
   top: 50%;
@@ -122,9 +78,9 @@ body {
 }
 
 .shop__icon i {
-  padding: 12px;
   background-color: var(--color-black);
   color: var(--color-white);
+  padding: 12px;
   opacity: 0;
   transition: all 0.2s ease-in-out;
   animation: appear-out 0.5s ease-in-out forwards;
@@ -162,11 +118,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Roboto", sans-serif;
   margin-top: 20px;
 }
 
-.shop__info .shop__title {
+.shop__title {
   color: var(--color-black);
   font-size: var(--font-small);
   font-weight: var(--weight-semi-bold);
@@ -174,7 +129,8 @@ body {
   margin-bottom: 16px;
 }
 
-.shop__info .shop__price {
+.shop__price {
+  position: relative;
   color: var(--color-black);
   font-size: var(--font-small);
   font-weight: var(--weight-regular);
@@ -182,34 +138,26 @@ body {
   margin-bottom: 10px;
 }
 
-/* shop sale, new */
+.shop__price span {
+  margin-right: 10px;
+}
+
 .shop__sale {
-  padding: 5px 12px;
   position: absolute;
   top: 0;
   right: 0;
   background-color: var(--color-black);
+  padding: 5px 12px;
 }
 
 .shop__sale span {
   color: var(--color-white);
-  font-family: "Roboto", sans-serif;
   font-size: var(--font-micro);
   font-weight: var(--weight-light);
   text-transform: uppercase;
 }
 
-/* shop price */
-
-.shop__price {
-  position: relative;
-}
-
-.shop__price span {
-  margin-right: 10px;
-}
-
-.shop__underbar {
+.shop__sale-bar {
   width: 24px;
   height: 1px;
   position: absolute;
@@ -217,17 +165,29 @@ body {
   left: -2px;
   background-color: var(--color-black);
 }
+/* end shop info */
 
-/* pages */
+/* start pages */
 .pages__title {
-  /* background-color: var(--color-light-gray); */
-  /* border-top: 1px solid var(--color-black); */
   border-bottom: 1px solid var(--color-black);
   color: var(--color-black);
-  font-family: "Roboto", sans-serif;
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 60px 145px;
 }
+/* end pages */
+
+/* scroll slide-in */
+@keyframes slide-in {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+/* end scroll slide-in */

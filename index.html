@@ -12,18 +12,18 @@
       src="https://kit.fontawesome.com/5c9cf55bcf.js"
       crossorigin="anonymous"
     ></script>
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
     <!-- header -->
     <header class="header">
       <nav class="navbar">
         <div id="logo" class="navbar__column">
-          <a href="index.html">Conatus.</a>
+          <img src="/img/logo.png" />
         </div>
         <ul class="navbar__column">
           <li class="navbar__menu"><a href="index.html">Home</a></li>
@@ -80,7 +80,11 @@
           </li>
         </ul>
       </nav>
+    </header>
 
+    <!-- main -->
+    <main class="home__main">
+      <!-- slideshow section -->
       <section class="slideshow__section">
         <ul class="slider">
           <li class="slide">
@@ -93,7 +97,6 @@
             </div>
             <div class="slide__img"></div>
           </li>
-
           <li class="slide">
             <div class="slide__text">
               <p class="slide__title">
@@ -108,12 +111,11 @@
             </div>
             <div class="slide__img"></div>
           </li>
-
           <li class="slide">
             <div class="slide__text">
               <div class="slide__title">
                 <h1>SPORTY.</h1>
-                <p class="slide__quote">
+                <p class="slide__description">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
                   aut iure architecto libero consequuntur similique expedita
                   fugiat facere adipisci? Nulla, iusto. Laboriosam dolorem quam
@@ -121,14 +123,12 @@
                 </p>
               </div>
               <div class="more__button">
-                <span>STYLES2</span
-                ><span class="copy__logo">&copy;CONATUS</span>
+                <span>STYLES</span><span class="copy__logo">&copy;CONATUS</span>
               </div>
             </div>
             <div class="slide__img"></div>
           </li>
         </ul>
-
         <button class="slider__button" id="slider__next">
           <div class="slider__arrow-next"></div>
         </button>
@@ -136,13 +136,11 @@
           <div class="slider__arrow-prev"></div>
         </button>
       </section>
-    </header>
 
-    <!-- main -->
-    <main class="index__main">
+      <!-- gallery section -->
       <section class="gallery__section">
-        <ul class="gallery__items">
-          <div class="gallery__wrapper">
+        <div class="gallery__wrapper">
+          <ul class="gallery__items">
             <li class="gallery__item">
               <div class="gallery__img">
                 <img src="img/t01.png" />
@@ -157,8 +155,8 @@
               <span class="shop__title">Alexandra</span>
               <span class="shop__price">30$</span>
             </div>
-          </div>
-          <div class="gallery__wrapper">
+          </ul>
+          <ul class="gallery__items">
             <li class="gallery__item">
               <div class="gallery__img">
                 <img src="img/t02.png" />
@@ -173,8 +171,8 @@
               <span class="shop__title">Cynthia</span>
               <span class="shop__price">34$</span>
             </div>
-          </div>
-          <div class="gallery__wrapper">
+          </ul>
+          <ul class="gallery__items">
             <li class="gallery__item">
               <div class="gallery__img">
                 <img src="img/t03.png" />
@@ -189,8 +187,8 @@
               <span class="shop__title">Danae</span>
               <span class="shop__price">28$</span>
             </div>
-          </div>
-          <div class="gallery__wrapper">
+          </ul>
+          <ul class="gallery__items">
             <li class="gallery__item">
               <div class="gallery__img">
                 <img src="img/t04.png" />
@@ -205,8 +203,8 @@
               <span class="shop__title">Eleanor</span>
               <span class="shop__price">36$</span>
             </div>
-          </div>
-          <div class="gallery__wrapper">
+          </ul>
+          <ul class="gallery__items">
             <li class="gallery__item">
               <div class="gallery__img">
                 <img src="img/t05.png" />
@@ -221,8 +219,8 @@
               <span class="shop__title">Helena</span>
               <span class="shop__price">30$</span>
             </div>
-          </div>
-          <div class="gallery__wrapper">
+          </ul>
+          <ul class="gallery__items">
             <li class="gallery__item">
               <div class="gallery__img">
                 <img src="img/t06.png" />
@@ -237,14 +235,16 @@
               <span class="shop__title">Jacinta</span>
               <span class="shop__price">24$</span>
             </div>
-          </div>
-        </ul>
+          </ul>
+        </div>
       </section>
 
-      <article class="shop__button">
+      <!-- view all products -->
+      <article class="view__button">
         <a href="products.html">View All Products</a>
       </article>
 
+      <!-- scroll text animation section -->
       <section class="scroll__section">
         <p class="scroll__title">
           <span class="scroll__text">New - Direction</span>
@@ -260,74 +260,67 @@
         </p>
       </section>
 
+      <!-- lookbook section -->
       <section class="lookbook__section">
-        <div class="lookbook__container">
-          <ul class="lookbook__items">
-            <li class="lookbook__item">
-              <div class="lookbook__img"></div>
-              <p class="lookbook__title">
-                <span>CONATUS</span>
-                <span>CONATUS</span>
-                <span>CONATUS</span>
-              </p>
-            </li>
-          </ul>
+        <div class="lookbook__items">
+          <div class="lookbook__item">
+            <div class="lookbook__img"></div>
+            <p class="lookbook__title">
+              <span>CONATUS</span>
+              <span>CONATUS</span>
+              <span>CONATUS</span>
+            </p>
+          </div>
 
-          <ul class="lookbook__items">
-            <li class="lookbook__item">
-              <div class="lookbook__img">
-                <!-- <img src="/img/shoe01.png" /> -->
-                <div class="shop__icon">
-                  <a href="producttype.html"><i class="fa fa-eye"></i></a>
-                  <a href="wishlist.html"><i class="fa fa-heart"></i></a>
-                  <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
-                </div>
-                <div class="shop__sale">
-                  <span>NEW</span>
-                </div>
+          <div class="lookbook__item">
+            <div class="lookbook__img">
+              <div class="shop__icon">
+                <a href="producttype.html"><i class="fa fa-eye"></i></a>
+                <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
               </div>
-              <div class="shop__info">
-                <span class="shop__title">Ella</span>
-                <span class="shop__price">20$</span>
+              <div class="shop__sale">
+                <span>NEW</span>
               </div>
-            </li>
-          </ul>
+            </div>
+            <div class="shop__info">
+              <span class="shop__title">Ella</span>
+              <span class="shop__price">20$</span>
+            </div>
+          </div>
 
-          <ul class="lookbook__items">
-            <li class="lookbook__item">
-              <div class="lookbook__img">
-                <div class="shop__icon">
-                  <a href="producttype.html"><i class="fa fa-eye"></i></a>
-                  <a href="wishlist.html"><i class="fa fa-heart"></i></a>
-                  <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
-                </div>
-                <div class="shop__sale">
-                  <span>SALE</span>
-                </div>
+          <div class="lookbook__item">
+            <div class="lookbook__img">
+              <div class="shop__icon">
+                <a href="producttype.html"><i class="fa fa-eye"></i></a>
+                <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
               </div>
-              <div class="shop__info">
-                <span class="shop__title">Phoenix</span>
-                <span class="shop__price">
-                  <span>48$</span>36$
-                  <div class="shop__underbar"></div>
-                </span>
+              <div class="shop__sale">
+                <span>SALE</span>
               </div>
-            </li>
-          </ul>
+            </div>
+            <div class="shop__info">
+              <span class="shop__title">Phoenix</span>
+              <span class="shop__price">
+                <span>48$</span>36$
+                <div class="shop__sale-bar"></div>
+              </span>
+            </div>
+          </div>
 
-          <ul class="lookbook__items">
-            <li class="lookbook__item">
-              <div class="lookbook__img"></div>
-              <p class="lookbook__title">
-                <span>CONATUS</span>
-                <span>CONATUS</span>
-                <span>CONATUS</span>
-              </p>
-            </li>
-          </ul>
+          <div class="lookbook__item">
+            <div class="lookbook__img"></div>
+            <p class="lookbook__title">
+              <span>CONATUS</span>
+              <span>CONATUS</span>
+              <span>CONATUS</span>
+            </p>
+          </div>
         </div>
       </section>
 
+      <!-- instagram section -->
       <section class="instagram__section">
         <ul class="insta__items">
           <li class="insta__item">
@@ -384,13 +377,13 @@
       </section>
     </main>
 
+    <!-- footer -->
     <footer class="footer">
       <section class="info__section">
         <ul class="info__items">
-          <li id="logo" class="nav__menu">
-            Conatus.
-            <span>Conatus.</span>
-          </li>
+          <div id="logo">
+            <img src="/img/logo.png" />
+          </div>
           <li class="info__item">New Direction, New Styles.</li>
         </ul>
         <ul class="info__items">
@@ -416,7 +409,6 @@
         </ul>
         <ul class="info__items">
           <li class="info__title">Conatus.</li>
-
           <li class="info__item">
             <a href="#" class="portfolio">Portfolio</a>
             <a href="https://github.com/cona-tus" class="git">Github </a>

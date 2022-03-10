@@ -33,7 +33,6 @@
 
 .slide__title {
   color: var(--color-white);
-  font-family: "Roboto", sans-serif;
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   text-align: center;
@@ -44,19 +43,19 @@
 .slide__subtitle {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  text-transform: uppercase;
   letter-spacing: 10px;
 }
 
-.slide__quote {
+.slide__description {
   width: 50%;
   transform: translateX(50%);
   margin-top: 30px;
   color: var(--color-white);
   font-size: var(--font-micro);
   font-weight: var(--weight-medium);
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 1px;
   text-align: center;
+  letter-spacing: 1px;
 }
 
 /* slide img */
@@ -94,7 +93,7 @@
   }
 }
 
-/*slodeshow buttons*/
+/* slider buttons*/
 .slider__button {
   cursor: pointer;
   position: absolute;
@@ -105,11 +104,11 @@
   z-index: 1;
 }
 
-.slider__button#slider__next {
+#slider__next {
   right: 32px;
 }
 
-.slider__button#slider__prev {
+#slider__prev {
   left: 32px;
 }
 
@@ -136,17 +135,11 @@
 .slider__arrow-prev::before {
   width: 16px;
   height: 2px;
+  position: absolute;
   content: "";
   display: inline-block;
   background-color: var(--color-white);
   transition: all 0.3s ease-in-out;
-}
-
-.slider__arrow-next::after,
-.slider__arrow-next::before,
-.slider__arrow-prev::after,
-.slider__arrow-prev::before {
-  position: absolute;
 }
 
 .slider__arrow-next::after {

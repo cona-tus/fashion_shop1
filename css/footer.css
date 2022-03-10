@@ -12,7 +12,6 @@
 
 .info__title {
   color: var(--color-black);
-  font-family: "Roboto", sans-serif;
   font-size: var(--font-small);
   font-weight: var(--weight-bold);
   text-transform: uppercase;
@@ -24,6 +23,14 @@
   margin-top: 14px;
 }
 
+.info__items:nth-child(1) .info__item {
+  color: var(--color-black);
+  font-family: "Roboto", sans-serif;
+  font-size: var(--font-small);
+  font-weight: var(--weight-medium);
+  font-style: italic;
+}
+
 .info__items:nth-child(3) .info__item {
   display: flex;
   flex-direction: column;
@@ -31,26 +38,17 @@
 
 .info__item a {
   color: var(--color-black);
-  font-family: "Roboto", sans-serif;
   font-size: var(--font-micro);
   font-weight: var(--weight-light);
-  letter-spacing: 0.5px;
-  transition: color 0.2s ease-out;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  letter-spacing: 0.5px;
   margin-right: 10px;
+  margin-bottom: 10px;
+  transition: color 0.2s ease-out;
 }
 
 .info__item a:hover {
   color: var(--color-light-gray);
-}
-
-.info__items:nth-child(1) .info__item {
-  color: var(--color-black);
-  font-family: "Roboto", sans-serif;
-  font-size: var(--font-small);
-  font-weight: var(--weight-medium);
-  font-style: italic;
 }
 
 .newsletter__form {
@@ -74,7 +72,6 @@
 
 .newsletter__input::placeholder {
   color: var(--color-black);
-  font-family: "Roboto", sans-serif;
   font-size: var(--font-small);
   font-weight: var(--weight-light);
 }

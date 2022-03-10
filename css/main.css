@@ -1,5 +1,5 @@
 /* main */
-.index__main {
+.home__main {
   margin-bottom: 100px;
 }
 
@@ -13,7 +13,7 @@
   margin-top: 100px;
 }
 
-.gallery__items {
+.gallery__wrapper {
   width: 80%;
   height: 100%;
   display: grid;
@@ -45,12 +45,12 @@
   animation: appear-in 0.5s ease-in-out forwards;
 }
 
-/* shop section */
-.shop__button {
+/* view all products section */
+.view__button {
   margin: 100px 0;
   text-align: center;
 }
-.shop__button a {
+.view__button a {
   color: var(--color-black);
   font-family: "Roboto", sans-serif;
   font-size: var(--font-micro);
@@ -62,7 +62,7 @@
   transition: all 0.2s ease-in;
 }
 
-.shop__button a:hover {
+.view__button a:hover {
   background-color: var(--color-black);
   color: var(--color-white);
 }
@@ -86,7 +86,6 @@
   color: transparent;
   font-size: var(--font-large);
   font-weight: var(--weight-extra-bold);
-  font-family: "Roboto", sans-serif;
   font-style: italic;
   text-transform: uppercase;
   white-space: nowrap;
@@ -110,18 +109,13 @@
   margin-top: 100px;
 }
 
-.lookbook__container {
+.lookbook__items {
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 100vh;
   row-gap: 100px;
-}
-
-.lookbook__items {
-  width: 100%;
-  height: 100%;
 }
 
 .lookbook__item {
@@ -139,28 +133,33 @@
   align-items: center;
 }
 
-.lookbook__items:nth-child(2) .lookbook__item,
-.lookbook__items:nth-child(3) .lookbook__item {
+.lookbook__item:nth-child(2),
+.lookbook__item:nth-child(3) {
   padding: 140px 100px;
 }
 
-.lookbook__items:nth-child(1) .lookbook__img {
+.lookbook__item:nth-child(1),
+.lookbook__item:nth-child(4) {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.lookbook__item:nth-child(1) .lookbook__img {
   background: url("/img/lookbook04.png") center / cover;
 }
 
-.lookbook__items:nth-child(2) .lookbook__img {
+.lookbook__item:nth-child(2) .lookbook__img {
   background: url("/img/shoe01.png") center / cover;
 }
 
-.lookbook__items:nth-child(3) .lookbook__img {
+.lookbook__item:nth-child(3) .lookbook__img {
   background: url("/img/hood01.png") center / cover;
 }
 
-.lookbook__items:nth-child(4) .lookbook__img {
+.lookbook__item:nth-child(4) .lookbook__img {
   background: url("/img/lookbook05.png") center / cover;
 }
 
-/* lookbook title */
 .lookbook__title {
   position: absolute;
   top: 50%;
@@ -171,9 +170,8 @@
 }
 
 .lookbook__title span {
-  color: transparent;
   -webkit-text-stroke: 1px var(--color-white);
-  font-family: "Roboto", sans-serif;
+  color: transparent;
   font-size: var(--font-large);
   font-weight: var(--weight-extra-bold);
   letter-spacing: 10px;
@@ -185,7 +183,6 @@
   font-style: italic;
 }
 
-/* shop icon */
 .lookbook__img:hover .shop__icon i {
   animation: appear-in 0.5s ease-in-out forwards;
 }
@@ -218,7 +215,6 @@
 .insta__button {
   width: 100%;
   height: 100%;
-  background-color: #0007;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -226,6 +222,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #0007;
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
