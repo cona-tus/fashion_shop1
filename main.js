@@ -13,6 +13,26 @@ closeButton.addEventListener("click", () => {
   searchScreen.classList.remove("active");
 });
 
+// sub search button
+const subSearchButton = document.querySelector(".sub__search__icon");
+subSearchButton.addEventListener("click", () => {
+  const subSearchScreen = document.querySelector(".sub__search__screen");
+  subSearchScreen.classList.add("active");
+});
+
+const subCloseButton = document.querySelector(".sub__close__icon");
+subCloseButton.addEventListener("click", () => {
+  const subSearchScreen = document.querySelector(".sub__search__screen");
+  subSearchScreen.classList.remove("active");
+});
+
+const toggleButton = document.querySelector(".toggle__button");
+
+toggleButton.addEventListener("click", () => {
+  const toggleScreen = document.querySelector(".toggle__screen");
+  toggleScreen.classList.toggle("active");
+});
+
 // main scroll slide-in animation
 const lookFirstItem = document.querySelector(".lookbook__item:nth-child(1)");
 const lookLastItem = document.querySelector(".lookbook__item:nth-child(4)");
