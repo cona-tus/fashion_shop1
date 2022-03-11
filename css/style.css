@@ -1,17 +1,17 @@
-@import "./css/reset.css";
-@import "./css/variables.css";
-@import "./css/nav.css";
-@import "./css/slideshow.css";
-@import "./css/main.css";
-@import "./css/footer.css";
-@import "./css/products.css";
-@import "./css/about.css";
-@import "./css/contact.css";
-@import "./css/faq.css";
-@import "./css/account.css";
-@import "./css/wishlist.css";
-@import "./css/cart.css";
-@import "./css/producttype.css";
+@import "reset.css";
+@import "variables.css";
+@import "nav.css";
+@import "slideshow.css";
+@import "main.css";
+@import "footer.css";
+@import "products.css";
+@import "about.css";
+@import "contact.css";
+@import "faq.css";
+@import "account.css";
+@import "wishlist.css";
+@import "cart.css";
+@import "producttype.css";
 
 /* global */
 * {

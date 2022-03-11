@@ -1,300 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conatus | Product Type</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="/src/main.js" defer></script>
-    <script
-      src="https://kit.fontawesome.com/5c9cf55bcf.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body id="type__body">
-    <header class="header">
-      <nav class="navbar">
-        <div id="logo" class="navbar__column">
-          <img src="/img/logo.png" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conatus | Product Type</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="src/main.js" defer></script>
+  <script src="https://kit.fontawesome.com/5c9cf55bcf.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body id="type__body">
+  <header class="header">
+    <nav class="navbar">
+      <div id="logo" class="navbar__column">
+        <img src="img/logo.png" />
+      </div>
+
+      <ul class="navbar__column">
+        <li class="navbar__menu"><a href="https://cona-tus.github.io/fashion_shop1/">Home</a></li>
+        <li class="navbar__menu dropdown">
+          <a href="#">Company</a>
+          <ul class="dropdown__items">
+            <li class="dropdown__item"><a href="about.html">About</a></li>
+            <li class="dropdown__item"><a href="contact.html">Contact</a></li>
+            <li class="dropdown__item"><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+        <li class="navbar__menu dropdown">
+          <a href="#">Product</a>
+          <ul class="dropdown__items">
+            <li class="dropdown__item">
+              <a href="products.html">Sidebar</a>
+            </li>
+            <li class="dropdown__item">
+              <a href="producttype.html">Details</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navbar__menu dropdown">
+          <a href="#">Shop</a>
+          <ul class="dropdown__items">
+            <li class="dropdown__item"><a href="account.html">Account</a></li>
+            <li class="dropdown__item">
+              <a href="wishlist.html">Wishlist</a>
+            </li>
+            <li class="dropdown__item"><a href="cart.html">Cart</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="navbar__column">
+        <li class="navbar__menu">
+          <a href="account.html"><i class="fa fa-user"></i></a>
+        </li>
+        <li class="navbar__menu">
+          <i class="search__icon fas fa-search fa"></i>
+          <div class="search__screen">
+            <i class="close__icon fas fa-times"></i>
+            <input type="text" class="search__input" placeholder="Search..." />
+          </div>
+        </li>
+        <li class="navbar__menu">
+          <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+        </li>
+        <li class="navbar__menu">
+          <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- sub nav bar -->
+    <aside class="sub__navbar">
+      <div class="sub__navbar__wrapper">
+        <div class="sub__navbar__column">
+          <button class="sub__navbar__toggle">
+            <i class="toggle__button fas fa-bars"></i>
+          </button>
+          <div class="toggle__screen">
+            <ul class="toggle__items">
+              <li class="toggle__item"><a href="https://cona-tus.github.io/fashion_shop1/">Home</a></li>
+              <li class="toggle__item">
+                <a href="#">Company</a>
+                <ul class="toggle__dropdown">
+                  <li class="toggle__dropdown__item">
+                    <a href="about.html">About</a>
+                  </li>
+                  <li class="toggle__dropdown__item">
+                    <a href="contact.html">Contact</a>
+                  </li>
+                  <li class="toggle__dropdown__item">
+                    <a href="faq.html">FAQ</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="toggle__item">
+                <a href="#">Product</a>
+                <ul class="toggle__dropdown">
+                  <li class="toggle__dropdown__item">
+                    <a href="products.html">Sidebar</a>
+                  </li>
+                  <li class="toggle__dropdown__item">
+                    <a href="producttype.html">Details</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="toggle__item">
+                <a href="#">Shop</a>
+                <ul class="toggle__dropdown">
+                  <li class="toggle__dropdown__item">
+                    <a href="account.html">Account</a>
+                  </li>
+                  <li class="toggle__dropdown__item">
+                    <a href="wishlist.html">Wishlist</a>
+                  </li>
+                  <li class="toggle__dropdown__item">
+                    <a href="cart.html">Cart</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <ul class="navbar__column">
-          <li class="navbar__menu"><a href="index.html">Home</a></li>
-          <li class="navbar__menu dropdown">
-            <a href="#">Company</a>
-            <ul class="dropdown__items">
-              <li class="dropdown__item"><a href="about.html">About</a></li>
-              <li class="dropdown__item"><a href="contact.html">Contact</a></li>
-              <li class="dropdown__item"><a href="faq.html">FAQ</a></li>
-            </ul>
-          </li>
-          <li class="navbar__menu dropdown">
-            <a href="#">Product</a>
-            <ul class="dropdown__items">
-              <li class="dropdown__item">
-                <a href="products.html">Sidebar</a>
-              </li>
-              <li class="dropdown__item">
-                <a href="producttype.html">Details</a>
-              </li>
-            </ul>
-          </li>
-          <li class="navbar__menu dropdown">
-            <a href="#">Shop</a>
-            <ul class="dropdown__items">
-              <li class="dropdown__item"><a href="account.html">Account</a></li>
-              <li class="dropdown__item">
-                <a href="wishlist.html">Wishlist</a>
-              </li>
-              <li class="dropdown__item"><a href="cart.html">Cart</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <ul class="navbar__column">
-          <li class="navbar__menu">
-            <a href="account.html"><i class="fa fa-user"></i></a>
-          </li>
-          <li class="navbar__menu">
-            <i class="search__icon fas fa-search fa"></i>
-            <div class="search__screen">
-              <i class="close__icon fas fa-times"></i>
-              <input
-                type="text"
-                class="search__input"
-                placeholder="Search..."
-              />
+        <div class="sub__navbar__column">
+          <img src="img/logo.png" />
+        </div>
+        <ul class="sub__navbar__column">
+          <li class="sub__navbar__menu">
+            <i class="sub__search__icon fas fa-search fa"></i>
+            <div class="sub__search__screen">
+              <i class="sub__close__icon fas fa-times"></i>
+              <input type="text" class="sub__search__input" placeholder="Search..." />
             </div>
           </li>
-          <li class="navbar__menu">
-            <a href="wishlist.html"><i class="fa fa-heart"></i></a>
-          </li>
-          <li class="navbar__menu">
+          <li class="sub__navbar__menu">
             <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
           </li>
         </ul>
-      </nav>
+      </div>
+    </aside>
+  </header>
 
-      <!-- sub nav bar -->
-      <aside class="sub__navbar">
-        <div class="sub__navbar__wrapper">
-          <div class="sub__navbar__column">
-            <button class="sub__navbar__toggle">
-              <i class="toggle__button fas fa-bars"></i>
-            </button>
-            <div class="toggle__screen">
-              <ul class="toggle__items">
-                <li class="toggle__item"><a href="index.html">Home</a></li>
-                <li class="toggle__item">
-                  <a href="#">Company</a>
-                  <ul class="toggle__dropdown">
-                    <li class="toggle__dropdown__item">
-                      <a href="about.html">About</a>
-                    </li>
-                    <li class="toggle__dropdown__item">
-                      <a href="contact.html">Contact</a>
-                    </li>
-                    <li class="toggle__dropdown__item">
-                      <a href="faq.html">FAQ</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="toggle__item">
-                  <a href="#">Product</a>
-                  <ul class="toggle__dropdown">
-                    <li class="toggle__dropdown__item">
-                      <a href="products.html">Sidebar</a>
-                    </li>
-                    <li class="toggle__dropdown__item">
-                      <a href="producttype.html">Details</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="toggle__item">
-                  <a href="#">Shop</a>
-                  <ul class="toggle__dropdown">
-                    <li class="toggle__dropdown__item">
-                      <a href="account.html">Account</a>
-                    </li>
-                    <li class="toggle__dropdown__item">
-                      <a href="wishlist.html">Wishlist</a>
-                    </li>
-                    <li class="toggle__dropdown__item">
-                      <a href="cart.html">Cart</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+  <main class="type__main">
+    <section class="type__section">
+      <ul class="type__imgs">
+        <li class="type__img"></li>
+        <li class="type__img"></li>
+      </ul>
+      <div class="type__text">
+        <h1 class="type__title">Helena</h1>
+        <span class="type__price">30$</span>
+
+        <div class="type__quantity">
+          <input class="type__input" type="number" value="1" />
+          <div class="type__buttons">
+            <button class="type__increment">+</button>
+            <button class="type__decrement">-</button>
           </div>
-          <div class="sub__navbar__column">
-            <img src="/img/logo.png" />
-          </div>
-          <ul class="sub__navbar__column">
-            <li class="sub__navbar__menu">
-              <i class="sub__search__icon fas fa-search fa"></i>
-              <div class="sub__search__screen">
-                <i class="sub__close__icon fas fa-times"></i>
-                <input
-                  type="text"
-                  class="sub__search__input"
-                  placeholder="Search..."
-                />
-              </div>
-            </li>
-            <li class="sub__navbar__menu">
-              <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
-            </li>
-          </ul>
+          <button class="addtocart__button">add to cart</button>
         </div>
-      </aside>
-    </header>
 
-    <main class="type__main">
-      <section class="type__section">
-        <ul class="type__imgs">
-          <li class="type__img"></li>
-          <li class="type__img"></li>
-        </ul>
-        <div class="type__text">
-          <h1 class="type__title">Helena</h1>
-          <span class="type__price">30$</span>
-
-          <div class="type__quantity">
-            <input class="type__input" type="number" value="1" />
-            <div class="type__buttons">
-              <button class="type__increment">+</button>
-              <button class="type__decrement">-</button>
-            </div>
-            <button class="addtocart__button">add to cart</button>
-          </div>
-
-          <a class="like__button" href="#"
-            ><i class="fa fa-heart"></i>add to wishlist</a
-          >
-          <div class="type__description">
-            <h4 class="details__title">Details</h4>
-            <p class="details__text">
-              Helena is an oversized t-shirt. Lorem, ipsum dolor sit amet
-              consectetur adipisicing elit. Voluptas, nemo.
-            </p>
-            <span class="details__info">Oversized fit</span
-            ><span class="details__info">Constructed sleeves</span
-            ><span class="details__info">100% organic cotton</span>
-          </div>
+        <a class="like__button" href="#"><i class="fa fa-heart"></i>add to wishlist</a>
+        <div class="type__description">
+          <h4 class="details__title">Details</h4>
+          <p class="details__text">
+            Helena is an oversized t-shirt. Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Voluptas, nemo.
+          </p>
+          <span class="details__info">Oversized fit</span><span class="details__info">Constructed sleeves</span><span
+            class="details__info">100% organic cotton</span>
         </div>
-      </section>
-      <section class="related__section">
-        <h1 class="related__title">RELATED PRODUCTS</h1>
-        <ul class="related__products">
-          <li class="related__item">
-            <div class="related__img">
-              <img src="img/t04.png" />
-            </div>
-            <div class="shop__icon">
-              <a href="/producttype.html"><i class="fa fa-eye"></i></a>
-              <a href="/wishlist.html"><i class="fa fa-heart"></i></a>
-              <a href="/cart.html"><i class="fas fa-shopping-bag"></i></a>
-            </div>
-          </li>
-          <li class="related__item">
-            <div class="related__img">
-              <img src="img/t06.png" />
-            </div>
-            <div class="shop__icon">
-              <a href="/producttype.html"><i class="fa fa-eye"></i></a>
-              <a href="/wishlist.html"><i class="fa fa-heart"></i></a>
-              <a href="/cart.html"><i class="fas fa-shopping-bag"></i></a>
-            </div>
-          </li>
-          <li class="related__item">
-            <div class="related__img">
-              <img src="img/shoe02.png" />
-            </div>
-            <div class="shop__icon">
-              <a href="/producttype.html"><i class="fa fa-eye"></i></a>
-              <a href="/wishlist.html"><i class="fa fa-heart"></i></a>
-              <a href="/cart.html"><i class="fas fa-shopping-bag"></i></a>
-            </div>
-          </li>
-          <li class="related__item">
-            <div class="related__img">
-              <img src="img/hood02.png" />
-            </div>
-            <div class="shop__icon">
-              <a href="/producttype.html"><i class="fa fa-eye"></i></a>
-              <a href="/wishlist.html"><i class="fa fa-heart"></i></a>
-              <a href="/cart.html"><i class="fas fa-shopping-bag"></i></a>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <section class="info__section">
-        <ul class="info__items">
-          <div id="logo">
-            <img src="/img/logo.png" />
+      </div>
+    </section>
+    <section class="related__section">
+      <h1 class="related__title">RELATED PRODUCTS</h1>
+      <ul class="related__products">
+        <li class="related__item">
+          <div class="related__img">
+            <img src="img/t04.png" />
           </div>
-          <li class="info__item">New Direction, New Styles.</li>
-        </ul>
-        <ul class="info__items">
-          <form class="newsletter__form">
-            <label for="email" class="info__title"
-              >Subscribe us for newsletter</label
-            >
-            <input
-              type="email"
-              class="newsletter__input"
-              placeholder="Email adress"
-              required
-            />
-          </form>
-          <li class="info__item">
-            <a href="about.html" class="about">About</a>
-            <a href="contact.html" class="contact">Contact</a>
-            <a href="faq.html" class="faq">FAQ</a>
-          </li>
-        </ul>
-        <ul class="info__items">
-          <li class="info__title">Conatus.</li>
-          <li class="info__item">
-            <a href="#" class="portfolio">Portfolio</a>
-            <a href="https://github.com/cona-tus" class="git">Github </a>
-            <a href="cona_tus@naver.com" class="mail">E-mail </a>
-          </li>
-        </ul>
-      </section>
-    </footer>
+          <div class="shop__icon">
+            <a href="producttype.html"><i class="fa fa-eye"></i></a>
+            <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+          </div>
+        </li>
+        <li class="related__item">
+          <div class="related__img">
+            <img src="img/t06.png" />
+          </div>
+          <div class="shop__icon">
+            <a href="producttype.html"><i class="fa fa-eye"></i></a>
+            <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+          </div>
+        </li>
+        <li class="related__item">
+          <div class="related__img">
+            <img src="img/shoe02.png" />
+          </div>
+          <div class="shop__icon">
+            <a href="producttype.html"><i class="fa fa-eye"></i></a>
+            <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+          </div>
+        </li>
+        <li class="related__item">
+          <div class="related__img">
+            <img src="img/hood02.png" />
+          </div>
+          <div class="shop__icon">
+            <a href="producttype.html"><i class="fa fa-eye"></i></a>
+            <a href="wishlist.html"><i class="fa fa-heart"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
 
-    <script>
-      // item quantity
-      const decrementBtn = document.querySelector(".type__decrement");
-      const incrementBtn = document.querySelector(".type__increment");
-      const itemTypeInput = document.querySelector(".type__input");
+  <footer class="footer">
+    <section class="info__section">
+      <ul class="info__items">
+        <div id="logo">
+          <img src="img/logo.png" />
+        </div>
+        <li class="info__item">New Direction, New Styles.</li>
+      </ul>
+      <ul class="info__items">
+        <form class="newsletter__form">
+          <label for="email" class="info__title">Subscribe us for newsletter</label>
+          <input type="email" class="newsletter__input" placeholder="Email adress" required />
+        </form>
+        <li class="info__item">
+          <a href="about.html" class="about">About</a>
+          <a href="contact.html" class="contact">Contact</a>
+          <a href="faq.html" class="faq">FAQ</a>
+        </li>
+      </ul>
+      <ul class="info__items">
+        <li class="info__title">Conatus.</li>
+        <li class="info__item">
+          <a href="https://cona-tus.github.io/22-portfolio/" target="blank" class="portfolio">Portfolio</a>
+          <a href="https://github.com/cona-tus" target="blank" class="git">Github </a>
+          <a href="cona_tus@naver.com" class="mail">E-mail </a>
+        </li>
+      </ul>
+    </section>
+  </footer>
 
-      decrementBtn.addEventListener("click", () => {
-        itemTypeInput.value = itemTypeInput.value - 1;
-        if (isNaN(itemTypeInput.value) || itemTypeInput.value <= 0) {
-          itemTypeInput.value = 1;
-        }
-      });
+  <script>
+    // item quantity
+    const decrementBtn = document.querySelector(".type__decrement");
+    const incrementBtn = document.querySelector(".type__increment");
+    const itemTypeInput = document.querySelector(".type__input");
 
-      incrementBtn.addEventListener("click", () => {
-        itemTypeInput.value = parseInt(itemTypeInput.value) + 1;
-      });
+    decrementBtn.addEventListener("click", () => {
+      itemTypeInput.value = itemTypeInput.value - 1;
+      if (isNaN(itemTypeInput.value) || itemTypeInput.value <= 0) {
+        itemTypeInput.value = 1;
+      }
+    });
 
-      // add to cart button
-      const addToCartButton = document.querySelector(".addtocart__button");
-      addToCartButton.addEventListener("click", () => {
-        alert("This item has been added to your cart");
-      });
-    </script>
-  </body>
+    incrementBtn.addEventListener("click", () => {
+      itemTypeInput.value = parseInt(itemTypeInput.value) + 1;
+    });
+
+    // add to cart button
+    const addToCartButton = document.querySelector(".addtocart__button");
+    addToCartButton.addEventListener("click", () => {
+      alert("This item has been added to your cart");
+    });
+  </script>
+</body>
+
 </html>

@@ -65,15 +65,15 @@
 }
 
 .slide:nth-child(1) .slide__img {
-  background: url("/img/main01.png") center / cover;
+  background: url("../img/main01.png") center / cover;
 }
 
 .slide:nth-child(2) .slide__img {
-  background: url("/img/main02.png") center / cover;
+  background: url("../img/main02.png") center / cover;
 }
 
 .slide:nth-child(3) .slide__img {
-  background: url("/img/main03.png") center / cover;
+  background: url("../img/main03.png") center / cover;
 }
 
 /* slide animation */

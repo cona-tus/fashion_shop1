@@ -23,11 +23,11 @@
 }
 
 .type__img:nth-child(1) {
-  background: url("/img/t05.png") center / cover;
+  background: url("../img/t05.png") center / cover;
 }
 
 .type__img:nth-child(2) {
-  background: url("/img/t05-1.png") center / cover;
+  background: url("../img/t05-1.png") center / cover;
 }
 
 /* type description */

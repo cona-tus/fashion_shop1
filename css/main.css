@@ -17,7 +17,7 @@
   width: 60%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-content: center;
   column-gap: 20px;
   row-gap: 40px;
@@ -115,8 +115,8 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 700px));
-  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 600px));
+  justify-content: space-around;
   grid-auto-rows: 100vh;
   row-gap: 100px;
 }
@@ -148,19 +148,19 @@
 }
 
 .lookbook__item:nth-child(1) .lookbook__img {
-  background: url("/img/lookbook04.png") center / cover;
+  background: url("../img/lookbook04.png") center / cover;
 }
 
 .lookbook__item:nth-child(2) .lookbook__img {
-  background: url("/img/shoe01.png") center / cover;
+  background: url("../img/shoe01.png") center / cover;
 }
 
 .lookbook__item:nth-child(3) .lookbook__img {
-  background: url("/img/hood01.png") center / cover;
+  background: url("../img/hood01.png") center / cover;
 }
 
 .lookbook__item:nth-child(4) .lookbook__img {
-  background: url("/img/lookbook05.png") center / cover;
+  background: url("../img/lookbook05.png") center / cover;
 }
 
 .lookbook__title {
