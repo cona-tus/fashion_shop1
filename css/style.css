@@ -384,11 +384,20 @@ body {
   }
 
   /* products section */
-  .products__section {
-    grid-template-columns: 1fr;
+  .categories {
+    display: none;
   }
 
-  .categories {
+  /* products detail section */
+  .type__img:nth-child(2) {
+    display: none;
+  }
+
+  .type__text {
+    position: static;
+  }
+
+  .related__section {
     display: none;
   }
 }
