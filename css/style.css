@@ -332,10 +332,12 @@ body {
 
 /* For below 1024px screen width */
 @media screen and (max-width: 1023px) {
+  /* slide show */
   .slideshow__section {
     display: none;
   }
 
+  /* lookbook section */
   .lookbook__items {
     justify-content: center;
   }
@@ -345,6 +347,7 @@ body {
     padding: 0;
   }
 
+  /* footer */
   .info__section {
     grid-template-columns: 2fr 1fr;
     justify-content: center;
@@ -354,10 +357,25 @@ body {
   .info__items:first-child {
     display: none;
   }
+
+  /* about section */
+  .about__section {
+    height: 100vh;
+    grid-template-columns: 1fr;
+  }
+
+  .about__imgs {
+    display: none;
+  }
+
+  .about__text {
+    padding: 70px 90px;
+  }
 }
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  /* navbar */
   .navbar {
     display: none;
   }
@@ -366,14 +384,17 @@ body {
     display: block;
   }
 
+  /* view button */
   .view__button a {
     padding: 15px 20px;
   }
 
+  /* scroll text */
   .scroll__section .scroll__text {
     -webkit-text-stroke: 1px var(--color-black);
   }
 
+  /* footer */
   .info__section {
     grid-template-columns: 1fr;
     justify-content: center;
