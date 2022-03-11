@@ -371,6 +371,20 @@ body {
   .about__text {
     padding: 70px 90px;
   }
+
+  /* contact section */
+  .contact__section {
+    height: 100vh;
+    grid-template-columns: 1fr;
+  }
+
+  .contact__imgs {
+    display: none;
+  }
+
+  .contact__text {
+    padding: 70px 90px;
+  }
 }
 
 /* For below 768px screen width */
