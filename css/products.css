@@ -3,6 +3,7 @@
 }
 
 .products__section {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
   padding: 0 100px;
@@ -113,8 +114,7 @@
 /* products */
 .category__products {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
-  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
   justify-content: center;
   column-gap: 10px;
   row-gap: 40px;

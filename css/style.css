@@ -393,6 +393,10 @@ body {
     display: none;
   }
 
+  .products__section {
+    grid-template-columns: 1fr;
+  }
+
   /* products detail section */
   .type__img:nth-child(2) {
     display: none;
@@ -465,6 +469,12 @@ body {
   .cart__img img {
     width: 100px;
     height: 100px;
+  }
+
+  /* shop icon */
+  .shop__icon i {
+    padding: 6px;
+    font-size: var(--font-small);
   }
 }
 

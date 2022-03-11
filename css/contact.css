@@ -21,10 +21,10 @@
 }
 
 .contact__img:nth-child(1) {
-  background: url("/img/about01.jpg") center / cover;
+  background: url("/img/contact01.jpg") center / cover;
 }
 .contact__img:nth-child(2) {
-  background: url("/img/about02.jpg") center / cover;
+  background: url("/img/contact02.jpg") center / cover;
 }
 
 .contact__text {
