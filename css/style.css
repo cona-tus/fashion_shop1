@@ -400,6 +400,11 @@ body {
   .related__section {
     display: none;
   }
+
+  /* my account section */
+  .account__section {
+    padding: 120px 0;
+  }
 }
 
 /* For below 768px screen width */
