@@ -166,16 +166,10 @@
           <span class="type__price">30$</span>
 
           <div class="type__quantity">
-            <input
-              class="type__input"
-              type="number"
-              value="1"
-              min="1"
-              max="10"
-            />
+            <input class="type__input" type="number" value="1" />
             <div class="type__buttons">
-              <button class="type__increment" onclick="stepper(this)">+</button>
-              <button class="type__decrement" onclick="stepper(this)">-</button>
+              <button class="type__increment">+</button>
+              <button class="type__decrement">-</button>
             </div>
             <button class="addtocart__button">add to cart</button>
           </div>
@@ -203,9 +197,9 @@
               <img src="img/t04.png" />
             </div>
             <div class="shop__icon">
-              <a href="#"><i class="fa fa-eye"></i></a>
-              <a href="#"><i class="fa fa-heart"></i></a>
-              <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              <a href="/producttype.html"><i class="fa fa-eye"></i></a>
+              <a href="/wishlist.html"><i class="fa fa-heart"></i></a>
+              <a href="/cart.html"><i class="fas fa-shopping-bag"></i></a>
             </div>
           </li>
           <li class="related__item">
@@ -213,9 +207,9 @@
               <img src="img/t06.png" />
             </div>
             <div class="shop__icon">
-              <a href="#"><i class="fa fa-eye"></i></a>
-              <a href="#"><i class="fa fa-heart"></i></a>
-              <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              <a href="/producttype.html"><i class="fa fa-eye"></i></a>
+              <a href="/wishlist.html"><i class="fa fa-heart"></i></a>
+              <a href="/cart.html"><i class="fas fa-shopping-bag"></i></a>
             </div>
           </li>
           <li class="related__item">
@@ -223,9 +217,9 @@
               <img src="img/shoe02.png" />
             </div>
             <div class="shop__icon">
-              <a href="#"><i class="fa fa-eye"></i></a>
-              <a href="#"><i class="fa fa-heart"></i></a>
-              <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              <a href="/producttype.html"><i class="fa fa-eye"></i></a>
+              <a href="/wishlist.html"><i class="fa fa-heart"></i></a>
+              <a href="/cart.html"><i class="fas fa-shopping-bag"></i></a>
             </div>
           </li>
           <li class="related__item">
@@ -233,9 +227,9 @@
               <img src="img/hood02.png" />
             </div>
             <div class="shop__icon">
-              <a href="#"><i class="fa fa-eye"></i></a>
-              <a href="#"><i class="fa fa-heart"></i></a>
-              <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              <a href="/producttype.html"><i class="fa fa-eye"></i></a>
+              <a href="/wishlist.html"><i class="fa fa-heart"></i></a>
+              <a href="/cart.html"><i class="fas fa-shopping-bag"></i></a>
             </div>
           </li>
         </ul>
@@ -280,19 +274,27 @@
     </footer>
 
     <script>
-      const typeInput = document.querySelector(".type__input");
-      function stepper(btn) {
-        let classNames = btn.getAttribute("class");
-        let min = typeInput.getAttribute("min");
-        let max = typeInput.getAttribute("max");
-        let step = typeInput.getAttribute("step");
-        let value = typeInput.getAttribute("value");
-        let calcStep = classNames == "type__increment" ? step + 1 : step + -1;
-        let newValue = parseInt(value) + calcStep;
-        if (newValue >= min && newValue <= max) {
-          typeInput.setAttribute("value", newValue);
+      // item quantity
+      const decrementBtn = document.querySelector(".type__decrement");
+      const incrementBtn = document.querySelector(".type__increment");
+      const itemTypeInput = document.querySelector(".type__input");
+
+      decrementBtn.addEventListener("click", () => {
+        itemTypeInput.value = itemTypeInput.value - 1;
+        if (isNaN(itemTypeInput.value) || itemTypeInput.value <= 0) {
+          itemTypeInput.value = 1;
         }
-      }
+      });
+
+      incrementBtn.addEventListener("click", () => {
+        itemTypeInput.value = parseInt(itemTypeInput.value) + 1;
+      });
+
+      // add to cart button
+      const addToCartButton = document.querySelector(".addtocart__button");
+      addToCartButton.addEventListener("click", () => {
+        alert("This item has been added to your cart");
+      });
     </script>
   </body>
 </html>
