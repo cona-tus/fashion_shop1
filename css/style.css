@@ -79,7 +79,7 @@ body {
 .shop__icon i {
   background-color: var(--color-black);
   color: var(--color-white);
-  padding: 12px;
+  padding: 10px;
   opacity: 0;
   transition: all 0.2s ease-in-out;
   animation: appear-out 0.5s ease-in-out forwards;
