@@ -38,3 +38,13 @@ function updateCartPrice() {
   }
   document.getElementsByClassName("total__price")[0].innerText = "$" + total;
 }
+
+const purchaseButton = document.querySelector(".checkout__button");
+purchaseButton.addEventListener("click", purchaseBtnClicked);
+
+function purchaseBtnClicked() {
+  alert("Thank you for your purchase");
+  let cartItems = document.getElementsByClassName("cart__item")[0];
+  cartItems.parentNode.remove();
+  updateCartPrice();
+}

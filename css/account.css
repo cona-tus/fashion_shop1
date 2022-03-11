@@ -20,11 +20,11 @@
 .account__button {
   cursor: pointer;
   width: 33%;
+  border: none;
+  background-color: transparent;
   color: var(--color-gray);
   font-size: var(--font-micro);
   font-weight: var(--weight-regular);
-  border: none;
-  background-color: transparent;
   transition: color 0.2s ease-out;
 }
 
@@ -59,17 +59,18 @@
   border: none;
   border: 1px solid var(--color-gray);
   background-color: transparent;
-  margin-bottom: 30px;
   padding: 10px;
+  margin-bottom: 30px;
 }
 
 .account__form input:focus {
-  outline: none;
   border: 1px solid var(--color-black);
+  outline: none;
 }
 
 .submit__button {
   cursor: pointer;
+  border: none;
   background-color: var(--color-light-gray);
   color: var(--color-black);
   font-size: var(--font-micro);
@@ -77,9 +78,8 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 15px 20px;
-  transition: all 0.2s ease-out;
-  border: none;
   margin-top: 20px;
+  transition: all 0.2s ease-out;
 }
 
 .submit__button:hover {
