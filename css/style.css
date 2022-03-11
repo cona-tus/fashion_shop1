@@ -405,6 +405,19 @@ body {
   .account__section {
     padding: 120px 0;
   }
+
+  /* wishlist section */
+
+  .wishlist__section {
+    padding: 100px 0;
+  }
+  .wishlist__header {
+    display: none;
+  }
+
+  .wishlist__subtitle:nth-child(3) {
+    display: none;
+  }
 }
 
 /* For below 768px screen width */
