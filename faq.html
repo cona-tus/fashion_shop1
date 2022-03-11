@@ -22,8 +22,9 @@
     <header class="header">
       <nav class="navbar">
         <div id="logo" class="navbar__column">
-          <a href="index.html">Conatus.</a>
+          <img src="/img/logo.png" />
         </div>
+
         <ul class="navbar__column">
           <li class="navbar__menu"><a href="index.html">Home</a></li>
           <li class="navbar__menu dropdown">
@@ -56,6 +57,7 @@
             </ul>
           </li>
         </ul>
+
         <ul class="navbar__column">
           <li class="navbar__menu">
             <a href="account.html"><i class="fa fa-user"></i></a>
@@ -79,15 +81,89 @@
           </li>
         </ul>
       </nav>
+
       <article class="pages__title">
         <h1>FAQ :</h1>
       </article>
+
+      <!-- sub nav bar -->
+      <aside class="sub__navbar">
+        <div class="sub__navbar__wrapper">
+          <div class="sub__navbar__column">
+            <button class="sub__navbar__toggle">
+              <i class="toggle__button fas fa-bars"></i>
+            </button>
+            <div class="toggle__screen">
+              <ul class="toggle__items">
+                <li class="toggle__item"><a href="index.html">Home</a></li>
+                <li class="toggle__item">
+                  <a href="#">Company</a>
+                  <ul class="toggle__dropdown">
+                    <li class="toggle__dropdown__item">
+                      <a href="about.html">About</a>
+                    </li>
+                    <li class="toggle__dropdown__item">
+                      <a href="contact.html">Contact</a>
+                    </li>
+                    <li class="toggle__dropdown__item">
+                      <a href="faq.html">FAQ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="toggle__item">
+                  <a href="#">Product</a>
+                  <ul class="toggle__dropdown">
+                    <li class="toggle__dropdown__item">
+                      <a href="products.html">Sidebar</a>
+                    </li>
+                    <li class="toggle__dropdown__item">
+                      <a href="producttype.html">Details</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="toggle__item">
+                  <a href="#">Shop</a>
+                  <ul class="toggle__dropdown">
+                    <li class="toggle__dropdown__item">
+                      <a href="account.html">Account</a>
+                    </li>
+                    <li class="toggle__dropdown__item">
+                      <a href="wishlist.html">Wishlist</a>
+                    </li>
+                    <li class="toggle__dropdown__item">
+                      <a href="cart.html">Cart</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sub__navbar__column">
+            <img src="/img/logo.png" />
+          </div>
+          <ul class="sub__navbar__column">
+            <li class="sub__navbar__menu">
+              <i class="sub__search__icon fas fa-search fa"></i>
+              <div class="sub__search__screen">
+                <i class="sub__close__icon fas fa-times"></i>
+                <input
+                  type="text"
+                  class="sub__search__input"
+                  placeholder="Search..."
+                />
+              </div>
+            </li>
+            <li class="sub__navbar__menu">
+              <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+            </li>
+          </ul>
+        </div>
+      </aside>
     </header>
 
     <main class="faq__main">
       <section class="faq__section">
         <ul class="faq__imgs">
-          <li class="faq__img"></li>
           <li class="faq__img"></li>
           <li class="faq__img"></li>
         </ul>
@@ -157,10 +233,9 @@
     <footer class="footer">
       <section class="info__section">
         <ul class="info__items">
-          <li id="logo" class="nav__menu">
-            Conatus.
-            <span>Conatus.</span>
-          </li>
+          <div id="logo">
+            <img src="/img/logo.png" />
+          </div>
           <li class="info__item">New Direction, New Styles.</li>
         </ul>
         <ul class="info__items">
@@ -174,9 +249,6 @@
               placeholder="Email adress"
               required
             />
-            <button type="submit" class="newsletter__button">
-              <i class="fas fa-envelope"></i>
-            </button>
           </form>
           <li class="info__item">
             <a href="about.html" class="about">About</a>
@@ -186,7 +258,6 @@
         </ul>
         <ul class="info__items">
           <li class="info__title">Conatus.</li>
-
           <li class="info__item">
             <a href="#" class="portfolio">Portfolio</a>
             <a href="https://github.com/cona-tus" class="git">Github </a>
@@ -197,14 +268,12 @@
     </footer>
 
     <script>
-      const OPEN_CLASS = "open";
       const accordionItems =
         document.getElementsByClassName("accordion__items");
-      const currentItem = document.querySelector(`.${OPEN_CLASS}`);
 
       for (i = 0; i < accordionItems.length; i++) {
         accordionItems[i].addEventListener("click", function () {
-          this.classList.toggle(OPEN_CLASS);
+          this.classList.toggle("open");
         });
       }
     </script>

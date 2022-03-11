@@ -358,31 +358,28 @@ body {
     display: none;
   }
 
-  /* about section */
-  .about__section {
+  /* pages title */
+  .pages__title {
+    display: none;
+  }
+
+  /* about, contact, FAQ section */
+  .about__section,
+  .contact__section,
+  .faq__section {
     height: 100vh;
     grid-template-columns: 1fr;
   }
 
-  .about__imgs {
+  .about__imgs,
+  .contact__imgs,
+  .faq__imgs {
     display: none;
   }
 
-  .about__text {
-    padding: 70px 90px;
-  }
-
-  /* contact section */
-  .contact__section {
-    height: 100vh;
-    grid-template-columns: 1fr;
-  }
-
-  .contact__imgs {
-    display: none;
-  }
-
-  .contact__text {
+  .about__text,
+  .contact__text,
+  .faq__part {
     padding: 70px 90px;
   }
 }
