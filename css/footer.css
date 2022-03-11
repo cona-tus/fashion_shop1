@@ -25,9 +25,8 @@
 
 .info__items:nth-child(1) .info__item {
   color: var(--color-black);
-  font-family: "Roboto", sans-serif;
   font-size: var(--font-small);
-  font-weight: var(--weight-medium);
+  font-weight: var(--weight-regular);
   font-style: italic;
 }
 
@@ -72,30 +71,10 @@
 
 .newsletter__input::placeholder {
   color: var(--color-black);
-  font-size: var(--font-small);
+  font-size: var(--font-micro);
   font-weight: var(--weight-light);
 }
 
 .newsletter__input:focus::placeholder {
-  color: var(--color-black);
-}
-
-.newsletter__button {
-  cursor: pointer;
-  position: absolute;
-  bottom: 4px;
-  right: 120px;
-  border: none;
-  background-color: transparent;
-}
-
-.newsletter__button i {
-  color: var(--color-black);
-  font-size: var(--font-small);
-  font-weight: var(--weight-extra-light);
-  transition: color 0.2s ease-out;
-}
-
-.newsletter__button i:hover {
-  color: var(--color-light-gray);
+  color: var(--color-gray);
 }

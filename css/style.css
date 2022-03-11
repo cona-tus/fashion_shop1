@@ -330,6 +330,32 @@ body {
   width: 80%;
 }
 
+/* For below 1024px screen width */
+@media screen and (max-width: 1023px) {
+  .slideshow__section {
+    display: none;
+  }
+
+  .lookbook__items {
+    justify-content: center;
+  }
+
+  .lookbook__item:nth-child(2),
+  .lookbook__item:nth-child(3) {
+    padding: 0;
+  }
+
+  .info__section {
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
+    padding: 80px 100px;
+  }
+
+  .info__items:first-child {
+    display: none;
+  }
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .navbar {
@@ -338,5 +364,25 @@ body {
 
   .sub__navbar {
     display: block;
+  }
+
+  .view__button a {
+    padding: 15px 20px;
+  }
+
+  .scroll__section .scroll__text {
+    -webkit-text-stroke: 1px var(--color-black);
+  }
+
+  .info__section {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 60px;
+  }
+
+  .info__items:nth-child(3) .info__item {
+    display: flex;
+    flex-direction: row;
   }
 }
