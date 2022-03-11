@@ -382,6 +382,15 @@ body {
   .faq__part {
     padding: 70px 90px;
   }
+
+  /* products section */
+  .products__section {
+    grid-template-columns: 1fr;
+  }
+
+  .categories {
+    display: none;
+  }
 }
 
 /* For below 768px screen width */
@@ -403,6 +412,11 @@ body {
   /* scroll text */
   .scroll__section .scroll__text {
     -webkit-text-stroke: 1px var(--color-black);
+  }
+
+  /* products section */
+  .category__products {
+    padding: 100px 0;
   }
 
   /* footer */
