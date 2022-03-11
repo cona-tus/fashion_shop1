@@ -19,11 +19,11 @@ function init() {
   firstButtion.style.animation = "fade-in 0.3s ease-in 0.3s forwards";
 }
 
-slideshow.addEventListener("mouseover", function () {
+slideshow.addEventListener("mouseover", () => {
   clearInterval(autoSlider);
 });
-slideshow.addEventListener("mouseleave", function () {
-  autoSlider = setInterval(function () {
+slideshow.addEventListener("mouseleave", () => {
+  autoSlider = setInterval(() => {
     plusSlides(1);
   }, 2000);
 });
@@ -64,13 +64,13 @@ function slideAnimation() {
 
 const nextBtn = document.querySelector("#slider__next");
 const prevBtn = document.querySelector("#slider__prev");
-nextBtn.addEventListener("click", function () {
+nextBtn.addEventListener("click", () => {
   plusSlides(1);
 });
-prevBtn.addEventListener("click", function () {
+prevBtn.addEventListener("click", () => {
   plusSlides(-1);
 });
 
-let autoSlider = setInterval(function () {
+let autoSlider = setInterval(() => {
   plusSlides(1);
 }, 2000);

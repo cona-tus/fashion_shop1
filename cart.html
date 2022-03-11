@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conatus | Cart</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="main.js" defer></script>
+    <script src="/src/main.js" defer></script>
     <script src="/src/cart.js" defer></script>
     <script
       src="https://kit.fontawesome.com/5c9cf55bcf.js"
       crossorigin="anonymous"
     ></script>
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -174,20 +173,27 @@
         <ul class="cart__items">
           <li class="cart__item">
             <a href="producttype.html" class="cart__img">
+              <img src="/img/t02.png" />
+              <span class="cart__product">Cynthia</span>
+            </a>
+            <span class="cart__price">34$</span>
+            <div class="quantity__button">
+              <button class="cart__decrement">-</button>
+              <input class="cart__quantity" type="number" value="1" />
+              <button class="cart__increment">+</button>
+            </div>
+            <button class="cart__remove">Remove</button>
+          </li>
+          <li class="cart__item">
+            <a href="producttype.html" class="cart__img">
               <img src="/img/t05.png" />
               <span class="cart__product">Helena</span>
             </a>
             <span class="cart__price">30$</span>
             <div class="quantity__button">
-              <button class="cart__decrement" onclick="stepper(this)">-</button>
-              <input
-                class="cart__quantity"
-                type="number"
-                value="1"
-                min="1"
-                max="10"
-              />
-              <button class="cart__increment" onclick="stepper(this)">+</button>
+              <button class="cart__decrement">-</button>
+              <input class="cart__quantity" type="number" value="1" />
+              <button class="cart__increment">+</button>
             </div>
             <button class="cart__remove">Remove</button>
           </li>
@@ -197,7 +203,7 @@
           <h1 class="total__title">CART TOTALS</h1>
           <div class="cart__content">
             <span class="total__subtitle">Total</span>
-            <span class="total__price">$30</span>
+            <span class="total__price">$64</span>
           </div>
 
           <button class="checkout__button">Proceed to checkout</button>

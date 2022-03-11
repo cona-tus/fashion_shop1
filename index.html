@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conatus | Home</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="main.js" defer></script>
+    <script src="/src/main.js" defer></script>
     <script src="/src/slideshow.js" defer></script>
     <script
       src="https://kit.fontawesome.com/5c9cf55bcf.js"
@@ -490,5 +490,28 @@
         </ul>
       </section>
     </footer>
+
+    <script>
+      // main scroll slide-in animation
+      const lookFirstItem = document.querySelector(
+        ".lookbook__item:nth-child(1)"
+      );
+      const lookLastItem = document.querySelector(
+        ".lookbook__item:nth-child(4)"
+      );
+
+      window.addEventListener("scroll", () => {
+        let value = window.scrollY;
+        console.log(value);
+
+        if (value > 1700) {
+          lookFirstItem.style.animation = "slide-in 0.5s ease-in forwards";
+        }
+
+        if (value > 2400) {
+          lookLastItem.style.animation = "slide-in 0.5s ease-in forwards";
+        }
+      });
+    </script>
   </body>
 </html>
