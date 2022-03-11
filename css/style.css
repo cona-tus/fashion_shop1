@@ -407,7 +407,6 @@ body {
   }
 
   /* wishlist section */
-
   .wishlist__section {
     padding: 100px 0;
   }
@@ -417,6 +416,23 @@ body {
 
   .wishlist__subtitle:nth-child(3) {
     display: none;
+  }
+
+  /* cart section */
+  .cart__section {
+    padding: 100px 0;
+  }
+
+  .cart__header {
+    display: none;
+  }
+
+  .quantity__button {
+    display: flex;
+  }
+
+  .cart__quantity {
+    width: 30px;
   }
 }
 
