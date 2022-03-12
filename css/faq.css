@@ -21,10 +21,10 @@
 }
 
 .faq__img:nth-child(1) {
-  background: url("img/faq01.jpg") center / cover;
+  background: url("../img/faq01.jpg") center / cover;
 }
 .faq__img:nth-child(2) {
-  background: url("img/faq02.jpg") center / cover;
+  background: url("../img/faq02.jpg") center / cover;
 }
 
 .faq__part {
