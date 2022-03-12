@@ -148,19 +148,19 @@
 }
 
 .lookbook__item:nth-child(1) .lookbook__img {
-  background: url("/img/lookbook04.png") center / cover;
+  background: url("img/lookbook04.png") center / cover;
 }
 
 .lookbook__item:nth-child(2) .lookbook__img {
-  background: url("/img/shoe01.png") center / cover;
+  background: url("img/shoe01.png") center / cover;
 }
 
 .lookbook__item:nth-child(3) .lookbook__img {
-  background: url("/img/hood01.png") center / cover;
+  background: url("img/hood01.png") center / cover;
 }
 
 .lookbook__item:nth-child(4) .lookbook__img {
-  background: url("/img/lookbook05.png") center / cover;
+  background: url("img/lookbook05.png") center / cover;
 }
 
 .lookbook__title {
